@@ -1,8 +1,11 @@
 # The Holy Bread Testament
 
-A cozy, scripture-styled website dedicated to the Holy Bread Testament, ready for GitHub Pages deployment.
+Written by @loaf and developed by @b4u.
+
+## Yappin Server
+Join our community: https://yapin.gg/invite/bread
 
 ## How to deploy:
 1. Extract this zip file.
-2. Upload `index.html` to your GitHub repository.
-3. Enable GitHub Pages in repository Settings -> Pages.
+2. Replace `index.html` in your GitHub repository.
+3. GitHub Pages will update automatically.
