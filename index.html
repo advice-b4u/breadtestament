@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Holy Bread Testament</title>
+    <title>The Bread Testament — Sacred Scriptures of the Breadkind</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Faustina:ital,wght@0,400;0,600;1,400;1,600&family=MedievalSharp&display=swap" rel="stylesheet">
     <style>
+
         :root {
-            --bg-deep: #1c140d;
-            --bg-parchment: #2a1f15;
-            --card-bg: rgba(45, 34, 24, 0.85);
-            --gold-light: #f4d068;
+            --bg-deep: #140d07;
+            --bg-parchment: #22160d;
+            --card-bg: rgba(36, 24, 15, 0.9);
+            --gold-light: #f9db78;
             --gold-main: #d4af37;
-            --gold-dim: #aa820a;
-            --text-warm: #f5e9da;
+            --gold-dim: #99750b;
+            --text-warm: #f7ede2;
             --text-muted: #cbb49d;
-            --wheat-glow: rgba(244, 208, 104, 0.25);
-            --border-gold: rgba(212, 175, 55, 0.35);
+            --wheat-glow: rgba(249, 219, 120, 0.25);
+            --border-gold: rgba(212, 175, 55, 0.4);
         }
 
         * {
@@ -34,8 +35,8 @@
         body {
             background-color: var(--bg-deep);
             background-image: 
-                radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.15) 0%, transparent 70%),
-                radial-gradient(circle at 50% 100%, rgba(139, 69, 19, 0.2) 0%, transparent 80%);
+                radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.2) 0%, transparent 65%),
+                radial-gradient(circle at 50% 100%, rgba(110, 50, 10, 0.28) 0%, transparent 80%);
             color: var(--text-warm);
             font-family: 'Faustina', serif;
             font-size: 1.25rem;
@@ -45,7 +46,6 @@
             position: relative;
         }
 
-        /* Ambient floating particles */
         .crumbs-container {
             position: fixed;
             top: 0;
@@ -61,8 +61,8 @@
             position: absolute;
             user-select: none;
             opacity: 0;
-            animation: floatAndSway 12s ease-in-out infinite;
-            filter: drop-shadow(0 0 6px var(--gold-light));
+            animation: floatAndSway 14s ease-in-out infinite;
+            filter: drop-shadow(0 0 8px var(--gold-light));
         }
 
         @keyframes floatAndSway {
@@ -71,23 +71,22 @@
                 opacity: 0;
             }
             15% {
-                opacity: 0.7;
+                opacity: 0.75;
             }
             50% {
-                transform: translateY(50vh) translateX(25px) rotate(180deg);
+                transform: translateY(50vh) translateX(30px) rotate(180deg);
             }
             85% {
-                opacity: 0.7;
+                opacity: 0.75;
             }
             100% {
-                transform: translateY(-10vh) translateX(-20px) rotate(360deg);
+                transform: translateY(-10vh) translateX(-25px) rotate(360deg);
                 opacity: 0;
             }
         }
 
-        /* Page Layout */
         .wrapper {
-            max-width: 900px;
+            max-width: 920px;
             margin: 0 auto;
             padding: 40px 20px 80px;
             position: relative;
@@ -96,7 +95,7 @@
 
         header {
             text-align: center;
-            padding: 60px 20px 40px;
+            padding: 70px 20px 45px;
             border-bottom: 2px solid var(--border-gold);
             margin-bottom: 40px;
             position: relative;
@@ -109,49 +108,49 @@
             left: 50%;
             transform: translateX(-50%);
             background: var(--bg-deep);
-            padding: 0 15px;
-            font-size: 1.8rem;
-            filter: drop-shadow(0 0 10px var(--gold-main));
+            padding: 0 16px;
+            font-size: 1.9rem;
+            filter: drop-shadow(0 0 12px var(--gold-main));
         }
 
         .halo-icon {
-            font-size: 3.8rem;
+            font-size: 4.5rem;
             margin-bottom: 15px;
             display: inline-block;
             animation: pulseGlow 3.5s infinite ease-in-out;
             cursor: pointer;
-            transition: transform 0.3s;
+            transition: transform 0.4s;
         }
 
         .halo-icon:hover {
-            transform: scale(1.15) rotate(5deg);
+            transform: scale(1.18) rotate(6deg);
         }
 
         @keyframes pulseGlow {
             0%, 100% { 
                 transform: scale(1); 
-                filter: drop-shadow(0 0 15px rgba(244, 208, 104, 0.4)); 
+                filter: drop-shadow(0 0 20px rgba(249, 219, 120, 0.5)); 
             }
             50% { 
                 transform: scale(1.08); 
-                filter: drop-shadow(0 0 30px rgba(244, 208, 104, 0.8)); 
+                filter: drop-shadow(0 0 40px rgba(249, 219, 120, 0.9)); 
             }
         }
 
         h1 {
             font-family: 'Cinzel', serif;
-            font-size: 2.8rem;
+            font-size: 3.1rem;
             font-weight: 900;
             letter-spacing: 3px;
             color: var(--gold-light);
             text-transform: uppercase;
-            text-shadow: 0 0 20px rgba(212, 175, 55, 0.4), 2px 2px 4px rgba(0, 0, 0, 0.9);
+            text-shadow: 0 0 25px rgba(212, 175, 55, 0.55), 2px 2px 5px rgba(0, 0, 0, 0.9);
             margin-bottom: 10px;
         }
 
         .subtitle {
             font-family: 'MedievalSharp', cursive;
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             color: var(--text-muted);
             letter-spacing: 1px;
             font-style: italic;
@@ -160,35 +159,41 @@
         nav {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin: 30px 0 20px;
+            gap: 8px;
+            margin: 35px 0 25px;
             flex-wrap: wrap;
+            position: sticky;
+            top: 15px;
+            z-index: 100;
+            background: rgba(20, 13, 7, 0.94);
+            padding: 10px 14px;
+            border-radius: 30px;
+            border: 1.5px solid var(--border-gold);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.7);
         }
 
         nav a {
             color: var(--gold-main);
             text-decoration: none;
             font-family: 'Cinzel', serif;
-            font-size: 0.95rem;
+            font-size: 0.8rem;
+            font-weight: 700;
             letter-spacing: 1px;
-            padding: 8px 18px;
-            border: 1px solid var(--border-gold);
-            border-radius: 4px;
-            background: rgba(42, 31, 21, 0.7);
+            padding: 5px 12px;
+            border: 1px solid transparent;
+            border-radius: 15px;
             transition: all 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
         }
 
         nav a:hover {
             background: var(--gold-main);
             color: var(--bg-deep);
-            box-shadow: 0 0 20px var(--wheat-glow);
-            transform: translateY(-2deg);
+            box-shadow: 0 0 15px var(--wheat-glow);
         }
 
-        /* Yappin Server Banner */
         .community-banner {
-            margin: 30px 0 50px;
+            margin: 35px 0 55px;
             text-align: center;
         }
 
@@ -196,38 +201,37 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            padding: 12px 24px;
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(42, 31, 21, 0.9) 100%);
+            padding: 14px 28px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.25) 0%, rgba(36, 24, 15, 0.95) 100%);
             border: 1.5px solid var(--gold-main);
             border-radius: 30px;
             color: var(--gold-light);
             text-decoration: none;
             font-family: 'Cinzel', serif;
-            font-size: 1.05rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), inset 0 0 15px rgba(244, 208, 104, 0.1);
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            transition: all 0.35s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(249, 219, 120, 0.15);
             animation: softPulse 4s infinite ease-in-out;
         }
 
         @keyframes softPulse {
-            0%, 100% { box-shadow: 0 4px 15px rgba(0,0,0,0.4), 0 0 0px rgba(212, 175, 55, 0.2); }
-            50% { box-shadow: 0 4px 20px rgba(0,0,0,0.6), 0 0 15px rgba(212, 175, 55, 0.4); }
+            0%, 100% { box-shadow: 0 4px 20px rgba(0,0,0,0.5), 0 0 0px rgba(212, 175, 55, 0.2); }
+            50% { box-shadow: 0 4px 25px rgba(0,0,0,0.7), 0 0 20px rgba(212, 175, 55, 0.5); }
         }
 
         .server-link:hover {
-            transform: scale(1.04) translateY(-2deg);
+            transform: scale(1.05) translateY(-2deg);
             background: var(--gold-main);
             color: var(--bg-deep);
-            box-shadow: 0 6px 25px rgba(244, 208, 104, 0.5);
+            box-shadow: 0 8px 30px rgba(249, 219, 120, 0.6);
         }
 
-        /* Scroll Reveal Animation */
         .reveal {
             opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            transform: translateY(35px);
+            transition: opacity 0.85s ease-out, transform 0.85s ease-out;
         }
 
         .reveal.active {
@@ -235,21 +239,47 @@
             transform: translateY(0);
         }
 
-        /* Chapter Styling */
+        .book-header {
+            text-align: center;
+            margin: 70px 0 35px;
+            padding: 35px 20px;
+            background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.15) 50%, transparent 100%);
+            border-top: 2px double var(--gold-main);
+            border-bottom: 2px double var(--gold-main);
+        }
+
+        .book-number {
+            font-family: 'Cinzel', serif;
+            font-size: 2.1rem;
+            font-weight: 900;
+            color: var(--gold-light);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 0 0 18px rgba(212, 175, 55, 0.5);
+        }
+
+        .book-subtitle {
+            font-family: 'MedievalSharp', cursive;
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-top: 8px;
+            font-style: italic;
+        }
+
         .chapter-card {
             background: var(--card-bg);
             border: 1px solid var(--border-gold);
             border-radius: 8px;
             padding: 45px 40px;
-            margin-bottom: 50px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 0 50px rgba(0,0,0,0.3);
+            margin-bottom: 45px;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.6), inset 0 0 60px rgba(0,0,0,0.4);
             backdrop-filter: blur(6px);
             position: relative;
         }
 
         .chapter-title {
             font-family: 'Cinzel', serif;
-            font-size: 1.8rem;
+            font-size: 1.75rem;
             color: var(--gold-light);
             text-align: center;
             margin-bottom: 30px;
@@ -268,10 +298,10 @@
         }
 
         .verse:hover {
-            background: rgba(212, 175, 55, 0.1);
+            background: rgba(212, 175, 55, 0.12);
             transform: translateX(6px);
             border-left-color: var(--gold-main);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
         }
 
         .verse-num {
@@ -279,9 +309,9 @@
             font-weight: 700;
             color: var(--gold-main);
             font-size: 0.95rem;
-            min-width: 48px;
+            min-width: 50px;
             user-select: none;
-            opacity: 0.85;
+            opacity: 0.9;
         }
 
         .verse-text {
@@ -289,7 +319,12 @@
             color: var(--text-warm);
         }
 
-        /* Drop cap for first verse */
+        .scripture-p {
+            margin-bottom: 14px;
+            color: var(--text-warm);
+            padding: 4px 12px;
+        }
+
         .chapter-card .verse:first-of-type .verse-text::first-letter {
             font-family: 'Cinzel', serif;
             font-size: 3.4rem;
@@ -300,11 +335,11 @@
             text-shadow: 0 0 12px rgba(212, 175, 55, 0.5);
         }
 
-        /* Benediction Special Styling */
         .benediction {
-            background: linear-gradient(180deg, rgba(42, 31, 21, 0.95) 0%, rgba(28, 20, 13, 0.95) 100%);
+            background: linear-gradient(180deg, rgba(36, 24, 15, 0.98) 0%, rgba(20, 13, 7, 0.98) 100%);
             border: 2px solid var(--gold-main);
             text-align: center;
+            padding: 55px 40px;
         }
 
         .benediction .chapter-title {
@@ -313,48 +348,57 @@
 
         .benediction-line {
             margin-bottom: 14px;
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             color: var(--text-warm);
             transition: all 0.3s ease;
         }
 
         .benediction-line:hover {
             color: var(--gold-light);
-            text-shadow: 0 0 10px rgba(244, 208, 104, 0.4);
+            text-shadow: 0 0 12px rgba(249, 219, 120, 0.5);
             transform: scale(1.01);
         }
 
         .benediction-quote {
             font-style: italic;
-            font-size: 1.45rem;
+            font-size: 1.5rem;
             color: var(--gold-light);
             margin: 30px 0;
-            padding: 18px;
+            padding: 20px;
             border-left: 3px solid var(--gold-main);
             border-right: 3px solid var(--gold-main);
-            background: rgba(0,0,0,0.25);
-            box-shadow: inset 0 0 15px rgba(0,0,0,0.4);
+            background: rgba(0,0,0,0.3);
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
         }
 
         .amen {
             font-family: 'Cinzel', serif;
-            font-size: 2.4rem;
-            font-weight: 700;
+            font-size: 2.6rem;
+            font-weight: 900;
             color: var(--gold-light);
             margin-top: 35px;
-            letter-spacing: 4px;
-            text-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+            letter-spacing: 5px;
+            text-shadow: 0 0 25px rgba(212, 175, 55, 0.7);
             animation: pulseGlow 4s infinite ease-in-out;
+        }
+
+        .hygiene-reminder {
+            font-family: 'MedievalSharp', cursive;
+            font-size: 1.25rem;
+            color: var(--gold-light);
+            margin-top: 25px;
+            font-style: italic;
+            opacity: 0.95;
         }
 
         footer {
             text-align: center;
-            padding: 40px 0;
+            padding: 45px 0;
             color: var(--text-muted);
-            font-size: 0.95rem;
+            font-size: 1rem;
             font-family: 'Cinzel', serif;
             border-top: 1px solid var(--border-gold);
-            margin-top: 60px;
+            margin-top: 65px;
             letter-spacing: 1px;
         }
 
@@ -364,25 +408,19 @@
 
         .credits {
             color: var(--gold-light);
-            font-weight: 600;
-        }
-
-        .bread-divider {
-            text-align: center;
-            margin: 40px 0;
-            color: var(--gold-dim);
-            font-size: 1.3rem;
-            letter-spacing: 12px;
-            opacity: 0.8;
+            font-weight: 700;
+            font-size: 1.1rem;
         }
 
         @media (max-width: 600px) {
-            h1 { font-size: 2rem; }
-            .chapter-card { padding: 25px 20px; }
+            h1 { font-size: 2.1rem; }
+            .chapter-card { padding: 25px 18px; }
             .verse { flex-direction: column; border-left: none; }
             .verse-num { margin-bottom: 4px; }
-            .server-link { font-size: 0.9rem; padding: 10px 18px; }
+            .server-link { font-size: 0.95rem; padding: 10px 20px; }
+            nav { display: none; }
         }
+
     </style>
 </head>
 <body>
@@ -390,15 +428,24 @@
     <div class="crumbs-container" id="crumbs"></div>
 
     <div class="wrapper">
-        <header class="reveal active">
+        <header id="header" class="reveal active">
             <div class="halo-icon">🍞</div>
-            <h1>The Holy Bread Testament</h1>
-            <div class="subtitle">Sacred Scriptures of the First Dough & The Council of Crumbs</div>
+            <h1>The Bread Testament</h1>
+            <div class="subtitle">The Sacred Scriptures of the Breadkind</div>
             
             <nav>
-                <a href="#chapter-1">Chapter I</a>
-                <a href="#chapter-3">Chapter III</a>
-                <a href="#benediction">Benediction</a>
+                <a href="#header">Top</a>
+<a href="#book-1">Book 1</a>
+<a href="#book-2">Book 2</a>
+<a href="#book-3">Book 3</a>
+<a href="#book-4">Book 4</a>
+<a href="#book-5">Book 5</a>
+<a href="#book-6">Book 6</a>
+<a href="#book-7">Book 7</a>
+<a href="#book-8">Book 8</a>
+<a href="#book-9">Book 9</a>
+<a href="#book-10">Book 10</a>
+<a href="#benediction">Benediction</a>
             </nav>
 
             <div class="community-banner">
@@ -408,112 +455,57 @@
             </div>
         </header>
 
-        <!-- CHAPTER 1 -->
-        <section id="chapter-1" class="chapter-card reveal">
-            <h2 class="chapter-title">Chapter 1 — The First Commandment</h2>
-            
-            <div class="verse"><span class="verse-num">1:1</span><span class="verse-text">Thou shalt bake bread.</span></div>
-            <div class="verse"><span class="verse-num">1:2</span><span class="verse-text">For the grain has been given, the water has been given, the fire has been given, and the hands to knead have been given.</span></div>
-            <div class="verse"><span class="verse-num">1:3</span><span class="verse-text">Let no person believe that the gifts of creation exist without purpose.</span></div>
-            <div class="verse"><span class="verse-num">1:4</span><span class="verse-text">Thou shalt learn the sacred art, whether thy first loaf be great or humble.</span></div>
-            <div class="verse"><span class="verse-num">1:5</span><span class="verse-text">Thou shalt not despise the apprentice whose dough is uneven, nor mock the baker whose first attempts have failed.</span></div>
-            <div class="verse"><span class="verse-num">1:6</span><span class="verse-text">For every master was once a beginner, and every great bakery was once an empty room.</span></div>
-            <div class="verse"><span class="verse-num">1:7</span><span class="verse-text">Thou shalt respect the ingredients, understand the fire, and give the dough the time it requires.</span></div>
-            <div class="verse"><span class="verse-num">1:8</span><span class="verse-text">Thou shalt seek knowledge from those who know more than thee, and thou shalt teach those who know less.</span></div>
-            <div class="verse"><span class="verse-num">1:9</span><span class="verse-text">Thou shalt not claim mastery merely because thou hast baked one perfect loaf.</span></div>
-            <div class="verse"><span class="verse-num">1:10</span><span class="verse-text">For the art of baking is a lifelong practice, and the wise baker remains a student even when others call them a master.</span></div>
-            <div class="verse"><span class="verse-num">1:11</span><span class="verse-text">Thou shalt bake bread according to thy means, and thou shalt not condemn thyself for lacking the finest ovens or the rarest ingredients.</span></div>
-            <div class="verse"><span class="verse-num">1:12</span><span class="verse-text">For the greatness of a baker is not measured solely by the equipment they possess, but by the care with which they use it.</span></div>
-            <div class="verse"><span class="verse-num">1:13</span><span class="verse-text">And when thy bread is burnt, learn from it.</span></div>
-            <div class="verse"><span class="verse-num">1:14</span><span class="verse-text">When thy dough refuses to rise, learn from it.</span></div>
-            <div class="verse"><span class="verse-num">1:15</span><span class="verse-text">When thy recipe fails, learn from it.</span></div>
-            <div class="verse"><span class="verse-num">1:16</span><span class="verse-text">And when thy loaf is successful, remember what brought thee there.</span></div>
-            <div class="verse"><span class="verse-num">1:17</span><span class="verse-text">For the purpose of the first commandment is not merely that bread shall be made, but that the sacred art shall endure.</span></div>
-        </section>
-
-        <div class="bread-divider">🍞 🌾 🍞</div>
-
-        <!-- CHAPTER 3 -->
-        <section id="chapter-3" class="chapter-card reveal">
-            <h2 class="chapter-title">Chapter 3 — The Third Commandment</h2>
-            
-            <div class="verse"><span class="verse-num">3:1</span><span class="verse-text">The bread will show the way.</span></div>
-            <div class="verse"><span class="verse-num">3:2</span><span class="verse-text">For bread is the lesson, the symbol, and the reminder of that which humanity may accomplish when it works together.</span></div>
-            <div class="verse"><span class="verse-num">3:3</span><span class="verse-text">As flour and water become dough, so may strangers become companions.</span></div>
-            <div class="verse"><span class="verse-num">3:4</span><span class="verse-text">As dough rises through patience, so may a person grow through learning.</span></div>
-            <div class="verse"><span class="verse-num">3:5</span><span class="verse-text">As the oven transforms the dough, so may hardship transform the heart, provided that the heart remains willing to learn.</span></div>
-            <div class="verse"><span class="verse-num">3:6</span><span class="verse-text">As the crust protects the loaf, so must the people protect the vulnerable.</span></div>
-            <div class="verse"><span class="verse-num">3:7</span><span class="verse-text">And as a loaf may be divided among many, so may kindness be multiplied through its giving.</span></div>
-            <div class="verse"><span class="verse-num">3:8</span><span class="verse-text">Thou shalt not mistake the bread for the whole of the teaching, for the bread is a reminder of the teaching.</span></div>
-            <div class="verse"><span class="verse-num">3:9</span><span class="verse-text">A person may bake every day and yet fail to understand the Bread.</span></div>
-            <div class="verse"><span class="verse-num">3:10</span><span class="verse-text">A person may recite every commandment and yet refuse to help a hungry neighbor.</span></div>
-            <div class="verse"><span class="verse-num">3:11</span><span class="verse-text">A person may possess the finest oven in the kingdom and yet have a heart colder than the stone beneath it.</span></div>
-            <div class="verse"><span class="verse-num">3:12</span><span class="verse-text">Therefore, let the commandments be measured not only by the words spoken, but by the deeds performed.</span></div>
-            <div class="verse"><span class="verse-num">3:13</span><span class="verse-text">For the one who speaks of generosity but practices greed has not understood the Second Commandment.</span></div>
-            <div class="verse"><span class="verse-num">3:14</span><span class="verse-text">The one who claims wisdom but refuses to learn has not understood the First.</span></div>
-            <div class="verse"><span class="verse-num">3:15</span><span class="verse-text">And the one who claims to follow the Bread while using it to divide the people has not understood the Third.</span></div>
-            <div class="verse"><span class="verse-num">3:16</span><span class="verse-text">Let the baker bake, the hungry be fed, the learner be taught, and the stranger be welcomed.</span></div>
-            <div class="verse"><span class="verse-num">3:17</span><span class="verse-text">Let the people remember the First Prophet, the generosity of Poy, the treachery of his son, and the wisdom of the Council of Crumbs.</span></div>
-            <div class="verse"><span class="verse-num">3:18</span><span class="verse-text">Let the recipes be shared, the ovens be tended, and the tables be prepared.</span></div>
-            <div class="verse"><span class="verse-num">3:19</span><span class="verse-text">And whenever the people break bread together, let them remember that no loaf was ever made from a single grain.</span></div>
-            <div class="verse"><span class="verse-num">3:20</span><span class="verse-text">For the world is vast, the people are many, and the ways of baking are countless.</span></div>
-            <div class="verse"><span class="verse-num">3:21</span><span class="verse-text">Yet the purpose of the Bread remains.</span></div>
-            <div class="verse"><span class="verse-num">3:22</span><span class="verse-text">To nourish the body.</span></div>
-            <div class="verse"><span class="verse-num">3:23</span><span class="verse-text">To bring people together.</span></div>
-            <div class="verse"><span class="verse-num">3:24</span><span class="verse-text">And to remind humanity that goodness, like dough, must be worked with care if it is to rise.</span></div>
-        </section>
-
-        <div class="bread-divider">🍞 🌾 🍞</div>
-
-        <!-- BENEDICTION -->
-        <section id="benediction" class="chapter-card benediction reveal">
-            <h2 class="chapter-title">The Benediction of the Loaf</h2>
-            
-            <p class="benediction-line">So it was written, and so it was preserved.</p>
-            <br>
-            <p class="benediction-line">From the First Dough came the universe.</p>
-            <p class="benediction-line">From the universe came life.</p>
-            <p class="benediction-line">From life came humanity.</p>
-            <p class="benediction-line">From humanity came the baker.</p>
-            <p class="benediction-line">From the baker came the loaf.</p>
-            <p class="benediction-line">From the loaf came the table.</p>
-            <p class="benediction-line">From the table came fellowship.</p>
-            <p class="benediction-line">And from fellowship came the hope that no person need face the world alone.</p>
-            <br>
-            <p class="benediction-line">Yet from the loaf also came greed, and from greed came poison, and from poison came hunger.</p>
-            <br>
-            <p class="benediction-line">Therefore, let no person believe that the Bread is righteous merely because it is bread.</p>
-            <p class="benediction-line">For even the finest ingredients may be used for evil, and even the most sacred traditions may be corrupted by those who seek power.</p>
-            <br>
-            <p class="benediction-line">Judge not the loaf by its crust alone.</p>
-            <p class="benediction-line">Judge not the baker by their title.</p>
-            <p class="benediction-line">Judge not the hungry by their hunger.</p>
-            <p class="benediction-line">Judge not the stranger by the shape of their bread.</p>
-            <br>
-            <p class="benediction-line">But look upon the hands that knead, the heart that gives, and the table at which the people gather.</p>
-            <br>
-            <p class="benediction-line">For the Bread was never meant to be a weapon.</p>
-            <p class="benediction-line">It was never meant to be a chain.</p>
-            <p class="benediction-line">It was never meant to be the property of the powerful alone.</p>
-            <p class="benediction-line">It was made to nourish.</p>
-            <p class="benediction-line">It was made to sustain.</p>
-            <p class="benediction-line">It was made to be shared.</p>
-            <br>
-            <p class="benediction-line">And should the world fall into famine once more, should the ovens grow cold, and should the greedy once again lock their storehouses, let the people remember the words of the First Prophet:</p>
-            
-            <div class="benediction-quote">"I will bake the bread."</div>
-
-            <p class="benediction-line">For as long as there is flour, there is possibility.</p>
-            <p class="benediction-line">As long as there is water, there is potential.</p>
-            <p class="benediction-line">As long as there is fire, there is transformation.</p>
-            <p class="benediction-line">And as long as there are people willing to work together, there shall be bread.</p>
-            <br>
-            <p class="benediction-line">Go forth, therefore, and bake.</p>
-            <p class="benediction-line">Go forth, and share.</p>
-            <p class="benediction-line">Go forth, and let the bread show the way.</p>
-
-            <div class="amen">AMEN.</div>
-        </section>
+        
+        <div id="book-1" class="book-header reveal">
+            <div class="book-number">BOOK I: THE BOOK OF DOUGH</div>
+            <div class="book-subtitle">Of Creation, the First Flour, and the Birth of All Things</div>
+        </div>
+        <div class="chapter-card reveal"><h2 class="chapter-title">Chapter 1 — The Beginning</h2><div class="verse"><span class="verse-num">1:1</span><span class="verse-text">In the beginning there was nothing, and nothing had no name, for there was none to name it.</span></div><div class="verse"><span class="verse-num">1:2</span><span class="verse-text">There was neither light nor darkness, neither warmth nor cold, neither hunger nor satisfaction, neither baker nor bread.</span></div><div class="verse"><span class="verse-num">1:3</span><span class="verse-text">And the emptiness stretched unto eternity, and there was no oven in which the void might be warmed.</span></div><div class="verse"><span class="verse-num">1:4</span><span class="verse-text">And God looked upon the nothingness and found it unsatisfactory, for even the nothingness had nothing to offer.</span></div><div class="verse"><span class="verse-num">1:5</span><span class="verse-text">And God pondered the emptiness, and God became hungry.</span></div><div class="verse"><span class="verse-num">1:6</span><span class="verse-text">And God said unto the void, "Let there be dough."</span></div><div class="verse"><span class="verse-num">1:7</span><span class="verse-text">And there was dough.</span></div><div class="verse"><span class="verse-num">1:8</span><span class="verse-text">And the dough was without form, and it was without purpose, and it stuck unto the hands of God.</span></div><div class="verse"><span class="verse-num">1:9</span><span class="verse-text">And God looked upon the dough and declared, "This is a beginning."</span></div><div class="verse"><span class="verse-num">1:10</span><span class="verse-text">And thus was the First Dough brought into existence, from which all things that would ever be baked were destined to arise.</span></div><div class="verse"><span class="verse-num">1:11</span><span class="verse-text">And God kneaded the dough, and the dough resisted, for it knew not what it was meant to become.</span></div><div class="verse"><span class="verse-num">1:12</span><span class="verse-text">And God kneaded it again, and the dough yielded, for God had greater strength than the dough and considerably more patience.</span></div><div class="verse"><span class="verse-num">1:13</span><span class="verse-text">And God separated a portion of the First Dough and called it the Foundation, and the Foundation became the substance from which all creation would be formed.</span></div><div class="verse"><span class="verse-num">1:14</span><span class="verse-text">And God said, "Let this dough be the beginning of all beginnings, the foundation of all foundations, and the ingredient from which all things shall find their purpose."</span></div><div class="verse"><span class="verse-num">1:15</span><span class="verse-text">And the dough was good.</span></div></div><div class="chapter-card reveal"><h2 class="chapter-title">Chapter 2 — The Baking of the Universe</h2><div class="verse"><span class="verse-num">2:1</span><span class="verse-text">And God took the First Dough and stretched it across the emptiness, spreading it thin in some places and thick in others.</span></div><div class="verse"><span class="verse-num">2:2</span><span class="verse-text">And God folded the dough upon itself, and within its folds there arose space, and within that space there arose time.</span></div><div class="verse"><span class="verse-num">2:3</span><span class="verse-text">And God sprinkled the dough with the spices of creation, and the spices were innumerable.</span></div><div class="verse"><span class="verse-num">2:4</span><span class="verse-text">And from the first pinch of salt came the seas, and from the scattering of flour came the stars, and from the warmth of God's hands came the first light.</span></div><div class="verse"><span class="verse-num">2:5</span><span class="verse-text">And God placed great lumps of dough throughout the heavens, and these became the galaxies.</span></div><div class="verse"><span class="verse-num">2:6</span><span class="verse-text">And within the galaxies God placed smaller pieces of dough, and these became the stars and their worlds.</span></div><div class="verse"><span class="verse-num">2:7</span><span class="verse-text">And God heated the great oven of the cosmos, and the universe began to bake.</span></div><div class="verse"><span class="verse-num">2:8</span><span class="verse-text">And the stars were the first crusts of creation, glowing with the heat of the divine oven.</span></div><div class="verse"><span class="verse-num">2:9</span><span class="verse-text">And the planets cooled, and their surfaces hardened, and their interiors remained warm, as though they remembered the hands that had shaped them.</span></div><div class="verse"><span class="verse-num">2:10</span><span class="verse-text">And God observed the universe and said, "This is a fine loaf, though it is not yet finished."</span></div><div class="verse"><span class="verse-num">2:11</span><span class="verse-text">For the universe had form, but it had no creatures to behold it; it had beauty, but none to appreciate it; it had abundance, but none to share in its abundance.</span></div><div class="verse"><span class="verse-num">2:12</span><span class="verse-text">And God declared, "Let there be things to eat bread."</span></div><div class="verse"><span class="verse-num">2:13</span><span class="verse-text">And so God began the next stage of creation.</span></div></div><div class="chapter-card reveal"><h2 class="chapter-title">Chapter 3 — The First Life</h2><div class="verse"><span class="verse-num">3:1</span><span class="verse-text">And God placed upon the worlds the waters of life, and within those waters stirred the smallest of creatures.</span></div><div class="verse"><span class="verse-num">3:2</span><span class="verse-text">And the creatures were simple, for they had neither mouths to speak nor minds to comprehend the wonders around them.</span></div><div class="verse"><span class="verse-num">3:3</span><span class="verse-text">And they multiplied, and they changed, and they adapted to the worlds upon which they lived.</span></div><div class="verse"><span class="verse-num">3:4</span><span class="verse-text">And through countless generations, the creatures became many kinds, and from the many kinds arose others still.</span></div><div class="verse"><span class="verse-num">3:5</span><span class="verse-text">And God watched as life unfolded according to the laws of creation.</span></div><div class="verse"><span class="verse-num">3:6</span><span class="verse-text">And God said, "Let the creatures grow, let them change, and let them become what they may through the long passage of time."</span></div><div class="verse"><span class="verse-num">3:7</span><span class="verse-text">And evolution proceeded according to its nature, and God did not interfere, for God had made the universe with laws and saw no reason to interrupt them.</span></div><div class="verse"><span class="verse-num">3:8</span><span class="verse-text">And from the smallest creatures came the great multitude of living things, swimming in the seas, crawling upon the land, and soaring through the skies.</span></div><div class="verse"><span class="verse-num">3:9</span><span class="verse-text">And the world became filled with life, though none yet understood the sacred art of baking.</span></div><div class="verse"><span class="verse-num">3:10</span><span class="verse-text">And God looked upon the creatures and found them good, but the ovens remained unused, and the flour remained undiscovered.</span></div><div class="verse"><span class="verse-num">3:11</span><span class="verse-text">And God waited.</span></div><div class="verse"><span class="verse-num">3:12</span><span class="verse-text">For the time of the baker had not yet come.</span></div></div><div class="chapter-card reveal"><h2 class="chapter-title">Chapter 4 — The Coming of Humanity</h2><div class="verse"><span class="verse-num">4:1</span><span class="verse-text">And after ages beyond counting, humanity arose from the long history of life, possessing hands to shape, minds to understand, and mouths through which to proclaim their hunger.</span></div><div class="verse"><span class="verse-num">4:2</span><span class="verse-text">And humanity looked upon the world and found it full of wonders, yet they knew not why they had been given the gift of hands.</span></div><div class="verse"><span class="verse-num">4:3</span><span class="verse-text">They built shelters, gathered food, tended fires, and sought to understand the mysteries of the heavens.</span></div><div class="verse"><span class="verse-num">4:4</span><span class="verse-text">And God looked upon humanity and saw that they possessed the ability to make something greater than the sum of its ingredients.</span></div><div class="verse"><span class="verse-num">4:5</span><span class="verse-text">And God called unto them, saying, "You have been given the hands to knead, the minds to learn, and the mouths to enjoy. What shall you make of these gifts?"</span></div><div class="verse"><span class="verse-num">4:6</span><span class="verse-text">And humanity answered, "We shall make what sustains us, and we shall seek that which brings us joy."</span></div><div class="verse"><span class="verse-num">4:7</span><span class="verse-text">And God said, "Then let your first great undertaking be bread."</span></div><div class="verse"><span class="verse-num">4:8</span><span class="verse-text">And humanity was confused, for they knew not what bread was.</span></div><div class="verse"><span class="verse-num">4:9</span><span class="verse-text">And God showed them the grains of the earth, the waters of the rivers, and the power of warmth.</span></div><div class="verse"><span class="verse-num">4:10</span><span class="verse-text">And God taught them that flour and water, when brought together and worked with patience, could become something greater than either alone.</span></div><div class="verse"><span class="verse-num">4:11</span><span class="verse-text">And God said, "Remember this: the grain may feed one, but bread may feed many. The ingredients may be separate, but their purpose is fulfilled when they are brought together."</span></div><div class="verse"><span class="verse-num">4:12</span><span class="verse-text">And humanity received the first lesson of the Bread.</span></div><div class="verse"><span class="verse-num">4:13</span><span class="verse-text">And thus began the sacred duty of the baker.</span></div></div>
+        <div id="book-2" class="book-header reveal">
+            <div class="book-number">BOOK II: THE BOOK OF FIRE</div>
+            <div class="book-subtitle">Of the First Flame, the First Prophet, and the Sacred Art</div>
+        </div>
+        <div class="chapter-card reveal"><h2 class="chapter-title">Chapter 1 — The Gift of Fire</h2><div class="verse"><span class="verse-num">1:1</span><span class="verse-text">And God saw that humanity possessed flour and water, but knew not how to transform them into the bread that had been promised.</span></div><div class="verse"><span class="verse-num">1:2</span><span class="verse-text">For the dough was raw, and raw dough was not the fulfillment of the divine purpose.</span></div><div class="verse"><span class="verse-num">1:3</span><span class="verse-text">And God gathered the first people upon a plain and placed before them a spark.</span></div><div class="verse"><span class="verse-num">1:4</span><span class="verse-text">And the spark became a flame, and the flame became a fire, and the fire illuminated the darkness.</span></div><div class="verse"><span class="verse-num">1:5</span><span class="verse-text">And the people recoiled, for they feared the great heat and knew not whether it was a blessing or a curse.</span></div><div class="verse"><span class="verse-num">1:6</span><span class="verse-text">But God spoke unto them, saying, "Fear not the flame, but respect its power. For that which may destroy can also transform."</span></div><div class="verse"><span class="verse-num">1:7</span><span class="verse-text">And God taught the people to control the fire, to feed it with wood, and to contain it within places prepared for its warmth.</span></div><div class="verse"><span class="verse-num">1:8</span><span class="verse-text">And the people learned to cook their food, and they learned to warm themselves during the cold nights.</span></div><div class="verse"><span class="verse-num">1:9</span><span class="verse-text">Yet the sacred purpose of the flame remained undiscovered.</span></div><div class="verse"><span class="verse-num">1:10</span><span class="verse-text">For no one had yet baked the first true loaf.</span></div></div><div class="chapter-card reveal"><h2 class="chapter-title">Chapter 2 — The First Prophet</h2><div class="verse"><span class="verse-num">2:1</span><span class="verse-text">And among the people there arose a woman whose heart was generous and whose curiosity was greater than her fear.</span></div><div class="verse"><span class="verse-num">2:2</span><span class="verse-text">She observed the dough, the fire, and the grains of the earth, and she wondered whether the gifts of God might be brought together.</span></div><div class="verse"><span class="verse-num">2:3</span><span class="verse-text">And she said unto the people, "I will bake the bread."</span></div><div class="verse"><span class="verse-num">2:4</span><span class="verse-text">And the people laughed, for they believed that the dough would burn, the fire would consume it, and their ingredients would be wasted.</span></div><div class="verse"><span class="verse-num">2:5</span><span class="verse-text">But the woman was not discouraged.</span></div><div class="verse"><span class="verse-num">2:6</span><span class="verse-text">She gathered the flour, added water, and worked the dough with her hands.</span></div><div class="verse"><span class="verse-num">2:7</span><span class="verse-text">She waited, and she shaped the dough, and she placed it near the warmth of the fire.</span></div><div class="verse"><span class="verse-num">2:8</span><span class="verse-text">And when the dough had risen, she placed it within the heat and waited once more.</span></div><div class="verse"><span class="verse-num">2:9</span><span class="verse-text">And the aroma of the baking dough spread across the plain.</span></div><div class="verse"><span class="verse-num">2:10</span><span class="verse-text">And the people gathered, drawn by a fragrance they had never known.</span></div><div class="verse"><span class="verse-num">2:11</span><span class="verse-text">And the woman removed the loaf from the fire, and the crust was golden, and the inside was soft, and the bread was warm.</span></div><div class="verse"><span class="verse-num">2:12</span><span class="verse-text">And she broke the loaf and offered a piece to those who had laughed at her.</span></div><div class="verse"><span class="verse-num">2:13</span><span class="verse-text">And they tasted it, and their laughter ceased.</span></div><div class="verse"><span class="verse-num">2:14</span><span class="verse-text">For they had tasted something greater than sustenance.</span></div><div class="verse"><span class="verse-num">2:15</span><span class="verse-text">They had tasted the fulfillment of a promise.</span></div><div class="verse"><span class="verse-num">2:16</span><span class="verse-text">And God spoke from the heavens, saying, "This is the way."</span></div><div class="verse"><span class="verse-num">2:17</span><span class="verse-text">And the woman became the First Prophet and the First Baker, and her name was remembered wherever bread was made.</span></div><div class="verse"><span class="verse-num">2:18</span><span class="verse-text">But her name was not preserved in every telling, and some scholars claim it was lost to the ages.</span></div><div class="verse"><span class="verse-num">2:19</span><span class="verse-text">Others claim that she deliberately withheld it, saying that the Bread was greater than the one who baked it.</span></div><div class="verse"><span class="verse-num">2:20</span><span class="verse-text">And the Council of Crumbs would later declare that the name mattered less than the deed.</span></div></div><div class="chapter-card reveal"><h2 class="chapter-title">Chapter 3 — The First Sharing</h2><div class="verse"><span class="verse-num">3:1</span><span class="verse-text">And the First Prophet baked many loaves, and she gave them unto the hungry.</span></div><div class="verse"><span class="verse-num">3:2</span><span class="verse-text">And the people came to her from distant lands, bringing their grain, their water, and the fruits of their labor.</span></div><div class="verse"><span class="verse-num">3:3</span><span class="verse-text">She taught them how to knead, how to shape, how to wait, and how to recognize when the bread was ready.</span></div><div class="verse"><span class="verse-num">3:4</span><span class="verse-text">And she did not demand riches for her teachings, nor did she forbid the people from learning her methods.</span></div><div class="verse"><span class="verse-num">3:5</span><span class="verse-text">For she understood that a recipe withheld from the world fed only one household, while a recipe shared could feed an entire civilization.</span></div><div class="verse"><span class="verse-num">3:6</span><span class="verse-text">And the people established ovens in their villages, and they taught their children the art of baking.</span></div><div class="verse"><span class="verse-num">3:7</span><span class="verse-text">And the children taught their children, and the knowledge passed from generation to generation.</span></div><div class="verse"><span class="verse-num">3:8</span><span class="verse-text">And the first bakeries arose, and with them came the first gatherings of the people.</span></div><div class="verse"><span class="verse-num">3:9</span><span class="verse-text">For people who had once eaten alone began to sit together.</span></div><div class="verse"><span class="verse-num">3:10</span><span class="verse-text">And neighbors who had once been strangers became friends through the breaking of bread.</span></div><div class="verse"><span class="verse-num">3:11</span><span class="verse-text">And God looked upon the people and was pleased.</span></div><div class="verse"><span class="verse-num">3:12</span><span class="verse-text">And the First Prophet declared, "Let no one claim that bread belongs only to the hands that bake it, for the bread fulfills its purpose when it is shared."</span></div><div class="verse"><span class="verse-num">3:13</span><span class="verse-text">And this became the First Teaching of the Bread.</span></div><div class="verse"><span class="verse-num">3:14</span><span class="verse-text">And the people remembered it.</span></div><div class="verse"><span class="verse-num">3:15</span><span class="verse-text">For a time.</span></div></div>
+        <div id="book-3" class="book-header reveal">
+            <div class="book-number">BOOK III: THE BOOK OF FOOD POISONING</div>
+            <div class="book-subtitle">Of Poy, the Treacherous Son, the Corruption of Bread, and the Birth of Evil</div>
+        </div>
+        <div class="chapter-card reveal"><h2 class="chapter-title">Chapter 1 — The Age of Abundance</h2><div class="verse"><span class="verse-num">1:1</span><span class="verse-text">After the First Prophet came many others, each seeking to improve the lives of their people.</span></div><div class="verse"><span class="verse-num">1:2</span><span class="verse-text">And some became healers, some became teachers, some became builders, and many became bakers.</span></div><div class="verse"><span class="verse-num">1:3</span><span class="verse-text">For the art of baking had spread across the land, and no village was complete without an oven.</span></div><div class="verse"><span class="verse-num">1:4</span><span class="verse-text">And the people experimented with their recipes, adding herbs, fruits, seeds, oils, and spices to their dough.</span></div><div class="verse"><span class="verse-num">1:5</span><span class="verse-text">Some baked flatbreads, others baked great loaves, and others shaped the dough into twists and sticks.</span></div><div class="verse"><span class="verse-num">1:6</span><span class="verse-text">And among these bakers there arose a man named Poy.</span></div><div class="verse"><span class="verse-num">1:7</span><span class="verse-text">Now Poy was a humble baker, though his skill was without equal.</span></div><div class="verse"><span class="verse-num">1:8</span><span class="verse-text">His bread was soft, his crust was golden, and his recipes possessed a quality that caused even the most troubled soul to pause and appreciate the meal before them.</span></div><div class="verse"><span class="verse-num">1:9</span><span class="verse-text">But Poy was best known for his breadsticks.</span></div><div class="verse"><span class="verse-num">1:10</span><span class="verse-text">And the breadsticks of Poy were magnificent.</span></div><div class="verse"><span class="verse-num">1:11</span><span class="verse-text">For they were crisp upon the outside, soft within, and seasoned with herbs and spices whose combination had never before been attempted.</span></div><div class="verse"><span class="verse-num">1:12</span><span class="verse-text">Travelers crossed mountains to taste them, merchants journeyed from distant cities, and kings sent messengers bearing gifts in exchange for a single basket.</span></div><div class="verse"><span class="verse-num">1:13</span><span class="verse-text">And those who tasted the breadsticks declared, "Never have we known such a thing."</span></div><div class="verse"><span class="verse-num">1:14</span><span class="verse-text">And those who tasted them a second time declared, "Bring us more."</span></div><div class="verse"><span class="verse-num">1:15</span><span class="verse-text">And those who tasted them a third time declared, "We shall return tomorrow."</span></div><div class="verse"><span class="verse-num">1:16</span><span class="verse-text">And God looked upon the world and smiled, for Poy had discovered a gift that brought joy to many.</span></div><div class="verse"><span class="verse-num">1:17</span><span class="verse-text">And Poy did not hoard his recipes, nor did he refuse a hungry traveler.</span></div><div class="verse"><span class="verse-num">1:18</span><span class="verse-text">He baked for the rich and the poor, for the powerful and the powerless, for the stranger and the friend.</span></div><div class="verse"><span class="verse-num">1:19</span><span class="verse-text">And when asked why he gave so freely, Poy answered, "For what is a baker who will not feed the hungry?"</span></div><div class="verse"><span class="verse-num">1:20</span><span class="verse-text">And his words were remembered by the people.</span></div><div class="verse"><span class="verse-num">1:21</span><span class="verse-text">And his breadsticks were remembered by the people even more.</span></div></div><div class="chapter-card reveal"><h2 class="chapter-title">Chapter 2 — The Son of Poy</h2><div class="verse"><span class="verse-num">2:1</span><span class="verse-text">And Poy had a son, who grew up surrounded by the abundance of his father's bakery.</span></div><div class="verse"><span class="verse-num">2:2</span><span class="verse-text">The son observed the travelers who came from distant lands and the gifts they brought to Poy.</span></div><div class="verse"><span class="verse-num">2:3</span><span class="verse-text">He observed the merchants who praised his father's skill and the nobles who sought to purchase his recipes.</span></div><div class="verse"><span class="verse-num">2:4</span><span class="verse-text">And he began to wonder why his father gave away that which others would pay dearly to possess.</span></div><div class="verse"><span class="verse-num">2:5</span><span class="verse-text">For the son believed that the breadsticks were not merely food, but wealth.</span></div><div class="verse"><span class="verse-num">2:6</span><span class="verse-text">And he said unto his father, "Why do you share our bread with these people? They come, they eat, and they depart. Yet they leave us with no lasting reward."</span></div><div class="verse"><span class="verse-num">2:7</span><span class="verse-text">And Poy answered, "They leave with full stomachs, and that is a reward."</span></div><div class="verse"><span class="verse-num">2:8</span><span class="verse-text">But the son was not satisfied.</span></div><div class="verse"><span class="verse-num">2:9</span><span class="verse-text">And he said, "Your food is your wealth. You must keep it to yourself if you wish to remain powerful."</span></div><div class="verse"><span class="verse-num">2:10</span><span class="verse-text">And Poy looked upon his son with sorrow, for he had taught him how to bake but had failed to teach him the meaning of the Bread.</span></div><div class="verse"><span class="verse-num">2:11</span><span class="verse-text">And Poy answered, "A loaf locked away in a chest feeds no one. A recipe buried in the earth teaches no one. Wealth that brings no good to the world is a burden disguised as a blessing."</span></div><div class="verse"><span class="verse-num">2:12</span><span class="verse-text">But the son turned away, for he desired power more than wisdom.</span></div><div class="verse"><span class="verse-num">2:13</span><span class="verse-text">And he began to count the loaves in his father's bakery, not by how many people they might feed, but by how much they might be worth.</span></div><div class="verse"><span class="verse-num">2:14</span><span class="verse-text">He counted the coins in his father's purse and imagined how many more he might possess.</span></div><div class="verse"><span class="verse-num">2:15</span><span class="verse-text">He watched the hungry and saw customers who had not yet paid.</span></div><div class="verse"><span class="verse-num">2:16</span><span class="verse-text">He watched the poor and saw mouths that could not make him rich.</span></div><div class="verse"><span class="verse-num">2:17</span><span class="verse-text">And in his heart, a terrible thought took root.</span></div><div class="verse"><span class="verse-num">2:18</span><span class="verse-text">That which had been given to all should belong to him alone.</span></div><div class="verse"><span class="verse-num">2:19</span><span class="verse-text">And the son of Poy became the first to taste greed.</span></div><div class="verse"><span class="verse-num">2:20</span><span class="verse-text">And greed, having found a home, hungered for more.</span></div></div><div class="chapter-card reveal"><h2 class="chapter-title">Chapter 3 — The Conspiracy of the Greedy</h2><div class="verse"><span class="verse-num">3:1</span><span class="verse-text">Now there were among the nobles certain individuals who had grown wealthy by keeping the necessities of life beyond the reach of the common people.</span></div><div class="verse"><span class="verse-num">3:2</span><span class="verse-text">They had stores of grain, barrels of oil, and cellars filled with food.</span></div><div class="verse"><span class="verse-num">3:3</span><span class="verse-text">Yet they desired more, for the heart that seeks only wealth is never satisfied by the wealth it obtains.</span></div><div class="verse"><span class="verse-num">3:4</span><span class="verse-text">And when they heard of Poy's breadsticks, they came unto his son in secret.</span></div><div class="verse"><span class="verse-num">3:5</span><span class="verse-text">And they said, "Your father possesses a recipe that brings the people together. While he shares it freely, the people remain content without us."</span></div><div class="verse"><span class="verse-num">3:6</span><span class="verse-text">And the son answered, "Then we must ensure that the people cannot obtain it without our permission."</span></div><div class="verse"><span class="verse-num">3:7</span><span class="verse-text">And one noble said, "We shall purchase the recipe."</span></div><div class="verse"><span class="verse-num">3:8</span><span class="verse-text">But another said, "Poy would refuse."</span></div><div class="verse"><span class="verse-num">3:9</span><span class="verse-text">And another said, "We shall offer him a fortune."</span></div><div class="verse"><span class="verse-num">3:10</span><span class="verse-text">But the son said, "My father would give it away before accepting your fortune."</span></div><div class="verse"><span class="verse-num">3:11</span><span class="verse-text">And they were troubled, for the generosity of Poy stood in the way of their ambitions.</span></div><div class="verse"><span class="verse-num">3:12</span><span class="verse-text">Then the son devised a plan.</span></div><div class="verse"><span class="verse-num">3:13</span><span class="verse-text">He said, "If the people come to believe that bread may bring them harm, they shall fear to eat bread that we have not approved."</span></div><div class="verse"><span class="verse-num">3:14</span><span class="verse-text">And the nobles understood his meaning.</span></div><div class="verse"><span class="verse-num">3:15</span><span class="verse-text">Together they conspired to corrupt the meal that had brought joy to the people.</span></div><div class="verse"><span class="verse-num">3:16</span><span class="verse-text">And they devised a diabolical seasoning, whose purpose was not to improve the taste of food but to bring sickness upon those who consumed it.</span></div><div class="verse"><span class="verse-num">3:17</span><span class="verse-text">And they named it Poison.</span></div><div class="verse"><span class="verse-num">3:18</span><span class="verse-text">And thus was the first weapon made from that which should have nourished humanity.</span></div><div class="verse"><span class="verse-num">3:19</span><span class="verse-text">And the conspirators rejoiced, believing that they had found a means to turn the gift of the Bread against the people.</span></div><div class="verse"><span class="verse-num">3:20</span><span class="verse-text">But they did not understand that evil, once introduced into the world, does not remain obedient to those who first summon it.</span></div></div><div class="chapter-card reveal"><h2 class="chapter-title">Chapter 4 — The Feast of Betrayal</h2><div class="verse"><span class="verse-num">4:1</span><span class="verse-text">And Poy announced that he would hold a great feast, inviting all who wished to taste his breadsticks.</span></div><div class="verse"><span class="verse-num">4:2</span><span class="verse-text">He called upon the villagers, the travelers, the merchants, and the poor.</span></div><div class="verse"><span class="verse-num">4:3</span><span class="verse-text">He invited the nobles, for he believed that even the proud might learn generosity by sitting among their fellow people.</span></div><div class="verse"><span class="verse-num">4:4</span><span class="verse-text">And the feast was prepared beneath a great canopy, and the tables were covered with bread, fruit, vegetables, and other foods.</span></div><div class="verse"><span class="verse-num">4:5</span><span class="verse-text">And the people gathered, rejoicing in the promise of a meal shared together.</span></div><div class="verse"><span class="verse-num">4:6</span><span class="verse-text">Poy entered the feast carrying a great basket of breadsticks, and the people welcomed him with cheers.</span></div><div class="verse"><span class="verse-num">4:7</span><span class="verse-text">And Poy's son approached his father and said, "Allow me to serve the breadsticks, that I may honor you before the people."</span></div><div class="verse"><span class="verse-num">4:8</span><span class="verse-text">And Poy, believing that his son wished to do good, gave him the basket.</span></div><div class="verse"><span class="verse-num">4:9</span><span class="verse-text">But the son had already conspired with the greedy nobles.</span></div><div class="verse"><span class="verse-num">4:10</span><span class="verse-text">And he served the breadsticks to the gathered people, withholding them only from those who had joined in the conspiracy.</span></div><div class="verse"><span class="verse-num">4:11</span><span class="verse-text">And the people ate, and they praised the breadsticks, for the flavor remained as wonderful as it had always been.</span></div><div class="verse"><span class="verse-num">4:12</span><span class="verse-text">And for a brief moment, the world was as it had been before greed entered the heart of man.</span></div><div class="verse"><span class="verse-num">4:13</span><span class="verse-text">Then tragedy struck.</span></div><div class="verse"><span class="verse-num">4:14</span><span class="verse-text">And the people began to feel ill.</span></div><div class="verse"><span class="verse-num">4:15</span><span class="verse-text">Their joy turned to confusion, and their confusion turned to fear.</span></div><div class="verse"><span class="verse-num">4:16</span><span class="verse-text">One cried out, "What has happened to us?"</span></div><div class="verse"><span class="verse-num">4:17</span><span class="verse-text">Another said, "The bread has betrayed us!"</span></div><div class="verse"><span class="verse-num">4:18</span><span class="verse-text">And the people grew sick, and many fled the feast in distress.</span></div><div class="verse"><span class="verse-num">4:19</span><span class="verse-text">And the tables were overturned, the baskets were abandoned, and the great feast became a scene of sorrow.</span></div><div class="verse"><span class="verse-num">4:20</span><span class="verse-text">Poy looked upon the people and was horrified, for he knew that his breadsticks had never brought harm to anyone before.</span></div><div class="verse"><span class="verse-num">4:21</span><span class="verse-text">He examined the remaining food, and he searched for the source of the calamity.</span></div><div class="verse"><span class="verse-num">4:22</span><span class="verse-text">But his son stood among the nobles, silent and watchful.</span></div><div class="verse"><span class="verse-num">4:23</span><span class="verse-text">And the conspirators spread their lie, declaring that Poy's breadsticks were dangerous and that only their own approved food could be trusted.</span></div><div class="verse"><span class="verse-num">4:24</span><span class="verse-text">And the people, frightened by their suffering, believed that the bread itself had become their enemy.</span></div><div class="verse"><span class="verse-num">4:25</span><span class="verse-text">And Poy wept, for his greatest creation had been used to bring misery upon those he loved.</span></div></div><div class="chapter-card reveal"><h2 class="chapter-title">Chapter 5 — The Birth of Evil</h2><div class="verse"><span class="verse-num">5:1</span><span class="verse-text">And evil was born.</span></div><div class="verse"><span class="verse-num">5:2</span><span class="verse-text">Not from the fire, nor from the flour, nor from the dough, but from the choice to use a gift for the suffering of others.</span></div><div class="verse"><span class="verse-num">5:3</span><span class="verse-text">For poison had existed as a substance, but now it had become an instrument of deception.</span></div><div class="verse"><span class="verse-num">5:4</span><span class="verse-text">And the son of Poy stood before the people and said, "Behold, the bread has made you sick. You cannot trust every baker, nor can you trust every loaf."</span></div><div class="verse"><span class="verse-num">5:5</span><span class="verse-text">And the nobles stood beside him, saying, "You must purchase your food from those who possess the means to guarantee its safety."</span></div><div class="verse"><span class="verse-num">5:6</span><span class="verse-text">And they offered bread at a price that the poor could not afford.</span></div><div class="verse"><span class="verse-num">5:7</span><span class="verse-text">And the people who had once eaten together began to fear one another.</span></div><div class="verse"><span class="verse-num">5:8</span><span class="verse-text">They questioned the ingredients in their meals and the hands that had prepared them.</span></div><div class="verse"><span class="verse-num">5:9</span><span class="verse-text">They accused innocent bakers of corruption and abandoned the recipes that had once sustained their families.</span></div><div class="verse"><span class="verse-num">5:10</span><span class="verse-text">And the greedy nobles seized the opportunity, gathering the grain and controlling the ovens.</span></div><div class="verse"><span class="verse-num">5:11</span><span class="verse-text">And Poy sought to reveal the truth, but the nobles had already spread their lies throughout the land.</span></div><div class="verse"><span class="verse-num">5:12</span><span class="verse-text">Some called him a fool.</span></div><div class="verse"><span class="verse-num">5:13</span><span class="verse-text">Others called him a liar.</span></div><div class="verse"><span class="verse-num">5:14</span><span class="verse-text">And many simply turned away, for they feared that the truth might require them to abandon the comfort of blaming another.</span></div><div class="verse"><span class="verse-num">5:15</span><span class="verse-text">And the son of Poy, having gained wealth through betrayal, found that his hunger for power had grown greater still.</span></div><div class="verse"><span class="verse-num">5:16</span><span class="verse-text">For greed does not end when it obtains what it desires.</span></div><div class="verse"><span class="verse-num">5:17</span><span class="verse-text">It merely discovers a greater desire.</span></div><div class="verse"><span class="verse-num">5:18</span><span class="verse-text">And thus the first corruption spread throughout the land.</span></div><div class="verse"><span class="verse-num">5:19</span><span class="verse-text">And the Bread, which had once brought people together, became a means by which they were divided.</span></div><div class="verse"><span class="verse-num">5:20</span><span class="verse-text">And God looked upon the world and did not smile.</span></div></div>
+        <div id="book-4" class="book-header reveal">
+            <div class="book-number">BOOK IV: THE BOOK OF HUNGER</div>
+            <div class="book-subtitle">Of Famine, Division, False Prophets, and the Council of Crumbs</div>
+        </div>
+        <div class="chapter-card reveal"><h2 class="chapter-title">Chapter 1 — The Great Hoarding</h2><div class="verse"><span class="verse-num">1:1</span><span class="verse-text">And after the corruption of the feast, fear spread throughout the land.</span></div><div class="verse"><span class="verse-num">1:2</span><span class="verse-text">The greedy nobles gathered the grain into great storehouses and locked their doors with iron.</span></div><div class="verse"><span class="verse-num">1:3</span><span class="verse-text">They seized the ovens and declared that only those who paid tribute might use them.</span></div><div class="verse"><span class="verse-num">1:4</span><span class="verse-text">They purchased the fields, the mills, and the tools of the bakers, until the people possessed little with which to make their own bread.</span></div><div class="verse"><span class="verse-num">1:5</span><span class="verse-text">And those who had once shared their loaves began to hide them.</span></div><div class="verse"><span class="verse-num">1:6</span><span class="verse-text">For they feared that their neighbors might take what little they possessed.</span></div><div class="verse"><span class="verse-num">1:7</span><span class="verse-text">And the evil whispered into their ears, saying, "Keep your bread. Give nothing away. The world is full of those who would take from you."</span></div><div class="verse"><span class="verse-num">1:8</span><span class="verse-text">And some believed the whisper.</span></div><div class="verse"><span class="verse-num">1:9</span><span class="verse-text">Others, who had been generous all their lives, began to wonder whether generosity had been their mistake.</span></div><div class="verse"><span class="verse-num">1:10</span><span class="verse-text">And the evil whispered again, saying, "You have worked harder than the others. You are more worthy. Take the bread of those who have less, and call it your reward."</span></div><div class="verse"><span class="verse-num">1:11</span><span class="verse-text">And many who had once been content with their own loaves began to seize the loaves of others.</span></div><div class="verse"><span class="verse-num">1:12</span><span class="verse-text">And the storehouses grew full, while the tables of the poor grew empty.</span></div><div class="verse"><span class="verse-num">1:13</span><span class="verse-text">And famine plagued the land, not because the earth could produce no grain, but because the grain was kept from those who needed it.</span></div><div class="verse"><span class="verse-num">1:14</span><span class="verse-text">And the hungry looked upon the locked storehouses and wondered why there was hunger in a world filled with food.</span></div><div class="verse"><span class="verse-num">1:15</span><span class="verse-text">And the greedy looked upon the hungry and declared that their suffering was proof that they deserved nothing.</span></div><div class="verse"><span class="verse-num">1:16</span><span class="verse-text">Thus did the people confuse possession with worthiness.</span></div><div class="verse"><span class="verse-num">1:17</span><span class="verse-text">And the world grew colder, though the ovens still burned.</span></div></div><div class="chapter-card reveal"><h2 class="chapter-title">Chapter 2 — The False Teaching</h2><div class="verse"><span class="verse-num">2:1</span><span class="verse-text">And the prophets gathered in the villages and called upon the people to remember the First Teaching.</span></div><div class="verse"><span class="verse-num">2:2</span><span class="verse-text">They said, "This is not the way."</span></div><div class="verse"><span class="verse-num">2:3</span><span class="verse-text">And the greedy answered, "Who are you to tell us what is right? We have earned our bread, and what we possess belongs to us."</span></div><div class="verse"><span class="verse-num">2:4</span><span class="verse-text">The prophets replied, "That which you have made with your hands may belong to you, but your hands did not create the earth from which your grain grows."</span></div><div class="verse"><span class="verse-num">2:5</span><span class="verse-text">"You did not command the rain to fall, nor did you command the sun to shine. You did not invent the grain, nor did you create the laws by which life flourishes."</span></div><div class="verse"><span class="verse-num">2:6</span><span class="verse-text">"You have labored, and your labor has value. But do not mistake the value of your labor for proof that another person deserves to starve."</span></div><div class="verse"><span class="verse-num">2:7</span><span class="verse-text">But the greedy would not listen.</span></div><div class="verse"><span class="verse-num">2:8</span><span class="verse-text">And they said, "The hungry are different from us. They have less because they are less. They do not deserve the bread that we have earned."</span></div><div class="verse"><span class="verse-num">2:9</span><span class="verse-text">And the prophets answered, "There are many kinds of bread, as there are many kinds of people."</span></div><div class="verse"><span class="verse-num">2:10</span><span class="verse-text">"Some loaves are dark, some are light. Some are soft, some are hard. Some rise high, and others remain flat."</span></div><div class="verse"><span class="verse-num">2:11</span><span class="verse-text">"Yet each has its purpose, and none should be condemned merely for being unlike another."</span></div><div class="verse"><span class="verse-num">2:12</span><span class="verse-text">"It is not the shape of the loaf that makes it bread, nor is it the wealth of a person that makes them worthy of life."</span></div><div class="verse"><span class="verse-num">2:13</span><span class="verse-text">"It is the fact that we are people that brings us together."</span></div><div class="verse"><span class="verse-num">2:14</span><span class="verse-text">And the people listened, and many wept, for they remembered a time when they had sat together without fear.</span></div><div class="verse"><span class="verse-num">2:15</span><span class="verse-text">But the corrupt nobles spread their own teachings, claiming that the prophets sought to steal the wealth of those who possessed it.</span></div><div class="verse"><span class="verse-num">2:16</span><span class="verse-text">And they called the prophets enemies of prosperity.</span></div><div class="verse"><span class="verse-num">2:17</span><span class="verse-text">And the people were divided between those who desired justice and those who feared losing their privilege.</span></div><div class="verse"><span class="verse-num">2:18</span><span class="verse-text">And the false teaching spread.</span></div></div><div class="chapter-card reveal"><h2 class="chapter-title">Chapter 3 — The Parable of the Two Loaves</h2><div class="verse"><span class="verse-num">3:1</span><span class="verse-text">And a prophet named Elowen stood before the people and spoke a parable.</span></div><div class="verse"><span class="verse-num">3:2</span><span class="verse-text">She said, "There were once two bakers who lived beside the same river."</span></div><div class="verse"><span class="verse-num">3:3</span><span class="verse-text">"The first baker possessed a single loaf, and the second baker possessed a hundred."</span></div><div class="verse"><span class="verse-num">3:4</span><span class="verse-text">"And a traveler came unto the first baker, hungry and weary, and asked for a piece of bread."</span></div><div class="verse"><span class="verse-num">3:5</span><span class="verse-text">"The first baker broke his loaf in two and gave half to the traveler."</span></div><div class="verse"><span class="verse-num">3:6</span><span class="verse-text">"And though he now possessed less bread, he had fed another person, and together they sat beside the river and ate."</span></div><div class="verse"><span class="verse-num">3:7</span><span class="verse-text">"Then the traveler came unto the second baker and asked for a piece of bread."</span></div><div class="verse"><span class="verse-num">3:8</span><span class="verse-text">"But the second baker said, 'I have a hundred loaves, and I shall not part with even one, for I must protect my wealth.'"</span></div><div class="verse"><span class="verse-num">3:9</span><span class="verse-text">"And the traveler departed hungry."</span></div><div class="verse"><span class="verse-num">3:10</span><span class="verse-text">"That night, a great rain fell upon the land, and the river rose."</span></div><div class="verse"><span class="verse-num">3:11</span><span class="verse-text">"The first baker and the traveler helped one another reach higher ground, and both survived."</span></div><div class="verse"><span class="verse-num">3:12</span><span class="verse-text">"But the second baker remained in his storehouse, guarding his hundred loaves, until the waters surrounded him."</span></div><div class="verse"><span class="verse-num">3:13</span><span class="verse-text">"And when morning came, the first baker had lost his bread, but he had gained a friend."</span></div><div class="verse"><span class="verse-num">3:14</span><span class="verse-text">"The second baker still possessed his wealth, but he had no one to help him."</span></div><div class="verse"><span class="verse-num">3:15</span><span class="verse-text">And Elowen looked upon the people and said, "What good is a hundred loaves if you have no one with whom to share them?"</span></div><div class="verse"><span class="verse-num">3:16</span><span class="verse-text">And some among the people understood.</span></div><div class="verse"><span class="verse-num">3:17</span><span class="verse-text">But others asked whether the second baker's storehouse had been insured.</span></div><div class="verse"><span class="verse-num">3:18</span><span class="verse-text">And Elowen sighed, for not every soul could be reached by a parable.</span></div></div><div class="chapter-card reveal"><h2 class="chapter-title">Chapter 4 — The Gathering of the Prophets</h2><div class="verse"><span class="verse-num">4:1</span><span class="verse-text">And as famine continued, the prophets understood that their words alone could not restore what had been lost.</span></div><div class="verse"><span class="verse-num">4:2</span><span class="verse-text">For the greedy possessed the storehouses, the nobles controlled the ovens, and the hungry had neither grain nor power.</span></div><div class="verse"><span class="verse-num">4:3</span><span class="verse-text">And the prophets gathered in secret, beneath the ruins of an ancient bakery.</span></div><div class="verse"><span class="verse-num">4:4</span><span class="verse-text">There came bakers, farmers, millers, teachers, healers, and those who had lost their homes to the famine.</span></div><div class="verse"><span class="verse-num">4:5</span><span class="verse-text">And each spoke of the suffering they had witnessed.</span></div><div class="verse"><span class="verse-num">4:6</span><span class="verse-text">One spoke of children who had never tasted a proper loaf.</span></div><div class="verse"><span class="verse-num">4:7</span><span class="verse-text">Another spoke of bakers forbidden to teach their craft.</span></div><div class="verse"><span class="verse-num">4:8</span><span class="verse-text">Another spoke of villages where the grain stores were full, yet the people starved outside their walls.</span></div><div class="verse"><span class="verse-num">4:9</span><span class="verse-text">And a fourth spoke of the son of Poy, who had grown wealthy from the suffering he had helped create.</span></div><div class="verse"><span class="verse-num">4:10</span><span class="verse-text">And the gathering fell silent.</span></div><div class="verse"><span class="verse-num">4:11</span><span class="verse-text">Then the eldest prophet stood and said, "We must stop this hunger."</span></div><div class="verse"><span class="verse-num">4:12</span><span class="verse-text">And another asked, "How shall we do so? Evil tells us that we may take the bread of others, and many among us obey."</span></div><div class="verse"><span class="verse-num">4:13</span><span class="verse-text">A third said, "We have taught generosity, yet generosity alone cannot protect the people from those who would exploit it."</span></div><div class="verse"><span class="verse-num">4:14</span><span class="verse-text">And a fourth declared, "Then we must write down the way, that no generation may claim ignorance of what we have learned."</span></div><div class="verse"><span class="verse-num">4:15</span><span class="verse-text">And the prophets considered this.</span></div><div class="verse"><span class="verse-num">4:16</span><span class="verse-text">For spoken words may be forgotten, and memories may be twisted, and the teachings of the wise may be stolen by the powerful.</span></div><div class="verse"><span class="verse-num">4:17</span><span class="verse-text">But a book, carefully preserved and taught, might endure beyond the lives of those who first composed it.</span></div><div class="verse"><span class="verse-num">4:18</span><span class="verse-text">And so the prophets resolved to create a sacred collection of teachings.</span></div><div class="verse"><span class="verse-num">4:19</span><span class="verse-text">They would record the duties of the baker, the obligations of the powerful, the rights of the hungry, and the principles by which the people might live together.</span></div><div class="verse"><span class="verse-num">4:20</span><span class="verse-text">And they named this collection the Book of Cooking.</span></div><div class="verse"><span class="verse-num">4:21</span><span class="verse-text">And the Book of Cooking would become the foundation of a greater testament.</span></div></div><div class="chapter-card reveal"><h2 class="chapter-title">Chapter 5 — The First Council of Crumbs</h2><div class="verse"><span class="verse-num">5:1</span><span class="verse-text">And the prophets understood that a book alone would not feed the hungry.</span></div><div class="verse"><span class="verse-num">5:2</span><span class="verse-text">For words may guide the hand, but the hand must still knead the dough.</span></div><div class="verse"><span class="verse-num">5:3</span><span class="verse-text">And so they established a council to preserve the teachings, organize the bakers, and restore the ovens of the land.</span></div><div class="verse"><span class="verse-num">5:4</span><span class="verse-text">They called themselves the Council of Crumbs, for they believed that even the smallest remnant of goodness must be preserved.</span></div><div class="verse"><span class="verse-num">5:5</span><span class="verse-text">And the council declared that no person should be denied the knowledge required to bake bread.</span></div><div class="verse"><span class="verse-num">5:6</span><span class="verse-text">They declared that those who possessed great stores of food must not use hunger as a means of controlling others.</span></div><div class="verse"><span class="verse-num">5:7</span><span class="verse-text">They declared that the recipes of the First Prophet should be taught freely, and that the crimes of Poy's son should never be forgotten.</span></div><div class="verse"><span class="verse-num">5:8</span><span class="verse-text">They established common ovens in the villages and appointed bakers to teach those who had never learned.</span></div><div class="verse"><span class="verse-num">5:9</span><span class="verse-text">They organized the distribution of grain and encouraged the people to rebuild their bakeries.</span></div><div class="verse"><span class="verse-num">5:10</span><span class="verse-text">And where a storehouse had been seized by the greedy, the council demanded that its contents be used to feed those who had been denied food.</span></div><div class="verse"><span class="verse-num">5:11</span><span class="verse-text">And some nobles surrendered their stores willingly.</span></div><div class="verse"><span class="verse-num">5:12</span><span class="verse-text">Others refused, and the council recorded their names in the Book of Hunger, that future generations might know who had chosen wealth over the lives of their neighbors.</span></div><div class="verse"><span class="verse-num">5:13</span><span class="verse-text">But the council did not declare all wealth evil.</span></div><div class="verse"><span class="verse-num">5:14</span><span class="verse-text">For the baker who labored honestly was entitled to enjoy the fruits of their work.</span></div><div class="verse"><span class="verse-num">5:15</span><span class="verse-text">Rather, the council condemned the use of wealth to deny others the means of survival.</span></div><div class="verse"><span class="verse-num">5:16</span><span class="verse-text">And the council taught that the purpose of abundance was not to create endless privilege, but to make hunger unnecessary.</span></div><div class="verse"><span class="verse-num">5:17</span><span class="verse-text">And the people began to rebuild.</span></div><div class="verse"><span class="verse-num">5:18</span><span class="verse-text">Yet the son of Poy remained at large, and the council knew that the struggle was not over.</span></div></div>
+        <div id="book-5" class="book-header reveal">
+            <div class="book-number">BOOK V: THE BOOK OF THE CRUST</div>
+            <div class="book-subtitle">Of the Preservation of Knowledge and the Trials of the First Council</div>
+        </div>
+        <div class="chapter-card reveal"><h2 class="chapter-title">Chapter 1 — The Bread That Endured</h2><div class="verse"><span class="verse-num">1:1</span><span class="verse-text">And the Council of Crumbs sent its members throughout the land to restore the art of baking.</span></div><div class="verse"><span class="verse-num">1:2</span><span class="verse-text">They traveled through villages, cities, and kingdoms, carrying seeds, flour, and the sacred recipes.</span></div><div class="verse"><span class="verse-num">1:3</span><span class="verse-text">They taught the people to prepare their own bread, that no single ruler might possess control over the food of an entire nation.</span></div><div class="verse"><span class="verse-num">1:4</span><span class="verse-text">And wherever they went, they established ovens and gathering places.</span></div><div class="verse"><span class="verse-num">1:5</span><span class="verse-text">And the people learned once more that bread was not merely an object to be purchased, but a skill to be practiced and a tradition to be shared.</span></div><div class="verse"><span class="verse-num">1:6</span><span class="verse-text">Yet the council discovered that many recipes had been lost during the famine.</span></div><div class="verse"><span class="verse-num">1:7</span><span class="verse-text">Some had been destroyed by fire, others had been hidden by the greedy, and others had disappeared with the bakers who once knew them.</span></div><div class="verse"><span class="verse-num">1:8</span><span class="verse-text">And the council mourned the loss of these recipes.</span></div><div class="verse"><span class="verse-num">1:9</span><span class="verse-text">Then one of the elders said, "Let us not mourn only what has been lost. Let us also preserve what remains, and teach the next generation to create what has not yet been imagined."</span></div><div class="verse"><span class="verse-num">1:10</span><span class="verse-text">And the council began to record every recipe it could recover.</span></div><div class="verse"><span class="verse-num">1:11</span><span class="verse-text">They recorded the names of the bakers, the ingredients of their loaves, and the methods by which the dough was prepared.</span></div><div class="verse"><span class="verse-num">1:12</span><span class="verse-text">They recorded the mistakes as well as the successes, for they understood that a failed loaf might teach as much as a perfect one.</span></div><div class="verse"><span class="verse-num">1:13</span><span class="verse-text">And the people began to understand that the preservation of knowledge was itself an act of generosity.</span></div><div class="verse"><span class="verse-num">1:14</span><span class="verse-text">For knowledge that survives the death of its teacher may continue to nourish the living.</span></div></div><div class="chapter-card reveal"><h2 class="chapter-title">Chapter 2 — The Trial of the Burnt Loaf</h2><div class="verse"><span class="verse-num">2:1</span><span class="verse-text">And there was a young baker who sought to join the council.</span></div><div class="verse"><span class="verse-num">2:2</span><span class="verse-text">He had studied the sacred recipes and practiced the art for many years, yet every loaf he baked emerged burnt.</span></div><div class="verse"><span class="verse-num">2:3</span><span class="verse-text">And the people mocked him, saying, "You have no place among the bakers, for even the simplest loaf escapes your mastery."</span></div><div class="verse"><span class="verse-num">2:4</span><span class="verse-text">And the young baker became ashamed.</span></div><div class="verse"><span class="verse-num">2:5</span><span class="verse-text">He approached the council and asked, "Am I unworthy to learn the sacred art?"</span></div><div class="verse"><span class="verse-num">2:6</span><span class="verse-text">And the eldest councilor answered, "Have you ceased to bake?"</span></div><div class="verse"><span class="verse-num">2:7</span><span class="verse-text">The young baker replied, "I have not."</span></div><div class="verse"><span class="verse-num">2:8</span><span class="verse-text">The councilor asked, "Have you ceased to learn?"</span></div><div class="verse"><span class="verse-num">2:9</span><span class="verse-text">And the young baker replied, "I have not."</span></div><div class="verse"><span class="verse-num">2:10</span><span class="verse-text">Then the councilor said, "Then you have not failed the Bread. You have merely discovered that your present method does not produce the loaf you desire."</span></div><div class="verse"><span class="verse-num">2:11</span><span class="verse-text">And the young baker was silent.</span></div><div class="verse"><span class="verse-num">2:12</span><span class="verse-text">The councilor continued, "The dough does not become perfect because the baker demands it. The baker must learn to understand the dough."</span></div><div class="verse"><span class="verse-num">2:13</span><span class="verse-text">And the young baker returned to his oven.</span></div><div class="verse"><span class="verse-num">2:14</span><span class="verse-text">He studied the fire, adjusted the heat, changed his methods, and sought the advice of others.</span></div><div class="verse"><span class="verse-num">2:15</span><span class="verse-text">And at last, he baked a loaf that was golden and whole.</span></div><div class="verse"><span class="verse-num">2:16</span><span class="verse-text">And he brought it before the council.</span></div><div class="verse"><span class="verse-num">2:17</span><span class="verse-text">They broke the loaf and tasted it.</span></div><div class="verse"><span class="verse-num">2:18</span><span class="verse-text">And the eldest councilor declared, "Behold, the lesson of the burnt loaf: the one who learns from failure may yet become a master."</span></div><div class="verse"><span class="verse-num">2:19</span><span class="verse-text">And the young baker was welcomed into the council.</span></div><div class="verse"><span class="verse-num">2:20</span><span class="verse-text">And from that day forward, the council forbade the mocking of those who were still learning.</span></div></div><div class="chapter-card reveal"><h2 class="chapter-title">Chapter 3 — The Bread of Many Nations</h2><div class="verse"><span class="verse-num">3:1</span><span class="verse-text">And as the people recovered from the famine, they traveled to distant lands and discovered that not all bread was alike.</span></div><div class="verse"><span class="verse-num">3:2</span><span class="verse-text">Some peoples baked thin loaves upon hot stones, while others baked great rounds in deep ovens.</span></div><div class="verse"><span class="verse-num">3:3</span><span class="verse-text">Some added seeds and herbs, while others preferred only flour, water, and salt.</span></div><div class="verse"><span class="verse-num">3:4</span><span class="verse-text">Some baked their bread until it became hard and crisp, while others prized the softness of a freshly risen loaf.</span></div><div class="verse"><span class="verse-num">3:5</span><span class="verse-text">And the people wondered which bread was the true bread.</span></div><div class="verse"><span class="verse-num">3:6</span><span class="verse-text">Then a prophet rose and said, "You ask which loaf is worthy, as though the Creator had commanded that all bread must be identical."</span></div><div class="verse"><span class="verse-num">3:7</span><span class="verse-text">"But behold the fields: do all grains grow in the same soil?"</span></div><div class="verse"><span class="verse-num">3:8</span><span class="verse-text">"Behold the people: do all communities possess the same ingredients, the same tools, or the same traditions?"</span></div><div class="verse"><span class="verse-num">3:9</span><span class="verse-text">"A people who dwell among mountains may bake differently from a people who dwell beside the sea."</span></div><div class="verse"><span class="verse-num">3:10</span><span class="verse-text">"A people who possess little fuel may prepare their bread differently from those who possess great ovens."</span></div><div class="verse"><span class="verse-num">3:11</span><span class="verse-text">"Yet all seek to nourish themselves, and all may share in the blessing of a meal."</span></div><div class="verse"><span class="verse-num">3:12</span><span class="verse-text">And the prophet broke a loaf from one nation and a loaf from another.</span></div><div class="verse"><span class="verse-num">3:13</span><span class="verse-text">She placed them upon the same table.</span></div><div class="verse"><span class="verse-num">3:14</span><span class="verse-text">And the people tasted both.</span></div><div class="verse"><span class="verse-num">3:15</span><span class="verse-text">And they discovered that difference did not diminish the goodness of either loaf.</span></div><div class="verse"><span class="verse-num">3:16</span><span class="verse-text">And the prophet declared, "Let no baker condemn another merely because their bread is unfamiliar."</span></div><div class="verse"><span class="verse-num">3:17</span><span class="verse-text">"For the world is not made poorer by the existence of many kinds of bread. It is made richer."</span></div><div class="verse"><span class="verse-num">3:18</span><span class="verse-text">And the people remembered this teaching.</span></div><div class="verse"><span class="verse-num">3:19</span><span class="verse-text">And the Council of Crumbs recorded it among the sacred teachings of the Bread.</span></div></div>
+        <div id="book-6" class="book-header reveal">
+            <div class="book-number">BOOK VI: THE BOOK OF THE TABLE</div>
+            <div class="book-subtitle">Of Fellowship, Hospitality, and the Sacred Duty of Sharing</div>
+        </div>
+        <div class="chapter-card reveal"><h2 class="chapter-title">Chapter 1 — The Empty Seat</h2><div class="verse"><span class="verse-num">1:1</span><span class="verse-text">And in a village restored by the Council of Crumbs, there lived a baker who prepared a great feast every year.</span></div><div class="verse"><span class="verse-num">1:2</span><span class="verse-text">He invited his family, his friends, his neighbors, and all who had helped him throughout the seasons.</span></div><div class="verse"><span class="verse-num">1:3</span><span class="verse-text">And each year, he set a table filled with bread and food.</span></div><div class="verse"><span class="verse-num">1:4</span><span class="verse-text">Yet he always left one seat empty.</span></div><div class="verse"><span class="verse-num">1:5</span><span class="verse-text">And the people asked him, "Why do you reserve a place for one who does not attend?"</span></div><div class="verse"><span class="verse-num">1:6</span><span class="verse-text">And the baker answered, "I know not who may come."</span></div><div class="verse"><span class="verse-num">1:7</span><span class="verse-text">"Perhaps a traveler will arrive after a long journey. Perhaps a stranger will seek shelter from the rain. Perhaps a hungry person will pass our village without knowing that a feast has been prepared."</span></div><div class="verse"><span class="verse-num">1:8</span><span class="verse-text">"And if such a person comes, shall I tell them that there is no room at my table?"</span></div><div class="verse"><span class="verse-num">1:9</span><span class="verse-text">The people considered his words.</span></div><div class="verse"><span class="verse-num">1:10</span><span class="verse-text">And the baker continued, "I would rather prepare a place for a stranger who never arrives than refuse a stranger who has nowhere else to go."</span></div><div class="verse"><span class="verse-num">1:11</span><span class="verse-text">And that year, as the feast began, a traveler arrived at the village.</span></div><div class="verse"><span class="verse-num">1:12</span><span class="verse-text">The traveler was weary, hungry, and unfamiliar with the customs of the people.</span></div><div class="verse"><span class="verse-num">1:13</span><span class="verse-text">The baker welcomed the traveler and seated them in the empty place.</span></div><div class="verse"><span class="verse-num">1:14</span><span class="verse-text">And the traveler ate, rested, and spoke with the people.</span></div><div class="verse"><span class="verse-num">1:15</span><span class="verse-text">And the gathering became richer for the presence of one who had not been expected.</span></div><div class="verse"><span class="verse-num">1:16</span><span class="verse-text">And the village remembered the lesson of the empty seat.</span></div><div class="verse"><span class="verse-num">1:17</span><span class="verse-text">And the council declared, "Let every table leave room for kindness."</span></div></div><div class="chapter-card reveal"><h2 class="chapter-title">Chapter 2 — The Loaf Divided</h2><div class="verse"><span class="verse-num">2:1</span><span class="verse-text">And there was a famine in a distant village, and a family possessed only one loaf of bread.</span></div><div class="verse"><span class="verse-num">2:2</span><span class="verse-text">The father looked upon the loaf and saw that it was not enough to satisfy every member of his household.</span></div><div class="verse"><span class="verse-num">2:3</span><span class="verse-text">And he feared that if he shared the loaf equally, none would be satisfied.</span></div><div class="verse"><span class="verse-num">2:4</span><span class="verse-text">So he hid the bread and ate it alone.</span></div><div class="verse"><span class="verse-num">2:5</span><span class="verse-text">And his family went hungry, and his heart grew heavy.</span></div><div class="verse"><span class="verse-num">2:6</span><span class="verse-text">For he had satisfied his stomach but burdened his soul.</span></div><div class="verse"><span class="verse-num">2:7</span><span class="verse-text">The following day, he found a neighbor standing outside his door.</span></div><div class="verse"><span class="verse-num">2:8</span><span class="verse-text">The neighbor possessed a loaf of bread and offered to divide it with the family.</span></div><div class="verse"><span class="verse-num">2:9</span><span class="verse-text">And the father was ashamed.</span></div><div class="verse"><span class="verse-num">2:10</span><span class="verse-text">He asked, "Why do you share your bread with us when you know that your own household must also eat?"</span></div><div class="verse"><span class="verse-num">2:11</span><span class="verse-text">And the neighbor answered, "Because tomorrow I may be the one who has nothing."</span></div><div class="verse"><span class="verse-num">2:12</span><span class="verse-text">"And when that day comes, I shall pray that someone remembers what it means to share."</span></div><div class="verse"><span class="verse-num">2:13</span><span class="verse-text">And the father understood.</span></div><div class="verse"><span class="verse-num">2:14</span><span class="verse-text">He had believed that sharing made a person weaker, but he now saw that sharing could create bonds stronger than fear.</span></div><div class="verse"><span class="verse-num">2:15</span><span class="verse-text">And he confessed his wrongdoing to his family.</span></div><div class="verse"><span class="verse-num">2:16</span><span class="verse-text">Together they began to prepare food for their neighbors, and their neighbors did the same.</span></div><div class="verse"><span class="verse-num">2:17</span><span class="verse-text">And though the famine did not vanish in a single day, the village endured it together.</span></div><div class="verse"><span class="verse-num">2:18</span><span class="verse-text">And the council recorded these words: "The loaf divided among many may be small, but the kindness within it is not diminished."</span></div></div>
+        <div id="book-7" class="book-header reveal">
+            <div class="book-number">BOOK VII: THE BOOK OF THE FALSE CRUST</div>
+            <div class="book-subtitle">Of the Return of Poy's Son and the Temptation of Power</div>
+        </div>
+        <div class="chapter-card reveal"><h2 class="chapter-title">Chapter 1 — The Return of the Greedy</h2><div class="verse"><span class="verse-num">1:1</span><span class="verse-text">And many years passed, and the Council of Crumbs grew strong.</span></div><div class="verse"><span class="verse-num">1:2</span><span class="verse-text">The ovens burned in the villages, the grain was planted in the fields, and the people once again gathered to share their bread.</span></div><div class="verse"><span class="verse-num">1:3</span><span class="verse-text">And some believed that the age of greed had ended.</span></div><div class="verse"><span class="verse-num">1:4</span><span class="verse-text">But evil had not been destroyed, for evil is not a creature that may be slain with a single blow.</span></div><div class="verse"><span class="verse-num">1:5</span><span class="verse-text">It is a choice that may be made again whenever a person values power above the well-being of others.</span></div><div class="verse"><span class="verse-num">1:6</span><span class="verse-text">And the son of Poy, who had long avoided the judgment of the people, returned from distant lands.</span></div><div class="verse"><span class="verse-num">1:7</span><span class="verse-text">He came dressed in fine garments and bearing gifts of gold.</span></div><div class="verse"><span class="verse-num">1:8</span><span class="verse-text">And he declared, "I have learned much during my travels. I have discovered new methods of baking, new methods of trade, and new ways by which the people may prosper."</span></div><div class="verse"><span class="verse-num">1:9</span><span class="verse-text">And many welcomed him, for they knew not the deeds of his youth.</span></div><div class="verse"><span class="verse-num">1:10</span><span class="verse-text">But the elders of the council remembered.</span></div><div class="verse"><span class="verse-num">1:11</span><span class="verse-text">They approached him and asked, "Have you come to make amends for what you did to your father and the people?"</span></div><div class="verse"><span class="verse-num">1:12</span><span class="verse-text">And he answered, "I have come to offer prosperity."</span></div><div class="verse"><span class="verse-num">1:13</span><span class="verse-text">The elders asked again, "Have you come to make amends?"</span></div><div class="verse"><span class="verse-num">1:14</span><span class="verse-text">And the son replied, "Must the past forever bind us? Surely a man may grow beyond his mistakes."</span></div><div class="verse"><span class="verse-num">1:15</span><span class="verse-text">And the elders answered, "A man may grow beyond his mistakes, but he must first acknowledge them."</span></div><div class="verse"><span class="verse-num">1:16</span><span class="verse-text">Yet the son refused to confess his deeds.</span></div><div class="verse"><span class="verse-num">1:17</span><span class="verse-text">Instead, he offered the council a bargain.</span></div><div class="verse"><span class="verse-num">1:18</span><span class="verse-text">He would provide the villages with grain, provided that the council granted him exclusive rights to the finest recipes.</span></div><div class="verse"><span class="verse-num">1:19</span><span class="verse-text">And the elders recognized the old temptation beneath the new promises.</span></div><div class="verse"><span class="verse-num">1:20</span><span class="verse-text">For the son had changed his garments, but not his heart.</span></div></div><div class="chapter-card reveal"><h2 class="chapter-title">Chapter 2 — The Lesson of the Bitter Loaf</h2><div class="verse"><span class="verse-num">2:1</span><span class="verse-text">And the son opened a great bakery and proclaimed that his bread was superior to all others.</span></div><div class="verse"><span class="verse-num">2:2</span><span class="verse-text">He declared that only his ovens could produce a truly worthy loaf.</span></div><div class="verse"><span class="verse-num">2:3</span><span class="verse-text">He hired scribes to record the names of those who purchased his bread and those who refused it.</span></div><div class="verse"><span class="verse-num">2:4</span><span class="verse-text">And he offered the poor a single loaf at a low price, but required them to surrender their labor in exchange.</span></div><div class="verse"><span class="verse-num">2:5</span><span class="verse-text">And those who could not pay were forbidden from entering his bakery.</span></div><div class="verse"><span class="verse-num">2:6</span><span class="verse-text">Soon the people began to depend upon him, for he had purchased the fields and mills surrounding the village.</span></div><div class="verse"><span class="verse-num">2:7</span><span class="verse-text">And he declared, "Behold, I have brought order to the chaos of the bakers. I have given the people a single standard by which to judge all bread."</span></div><div class="verse"><span class="verse-num">2:8</span><span class="verse-text">But the council observed that the bread was expensive, the workers were poorly treated, and the people had lost the ability to bake for themselves.</span></div><div class="verse"><span class="verse-num">2:9</span><span class="verse-text">Then the eldest councilor purchased a loaf and brought it before the gathering.</span></div><div class="verse"><span class="verse-num">2:10</span><span class="verse-text">The people tasted it and found that it was ordinary bread.</span></div><div class="verse"><span class="verse-num">2:11</span><span class="verse-text">And the councilor said, "The loaf is not evil because it is made by the son of Poy. Nor is it good because he calls it superior."</span></div><div class="verse"><span class="verse-num">2:12</span><span class="verse-text">"Judge the bread by what it is, and judge the baker by what they do."</span></div><div class="verse"><span class="verse-num">2:13</span><span class="verse-text">"For a fine crust cannot conceal a corrupt heart forever."</span></div><div class="verse"><span class="verse-num">2:14</span><span class="verse-text">And the people understood that the false crust was not a kind of bread, but a disguise worn by those who wished to appear righteous without practicing righteousness.</span></div><div class="verse"><span class="verse-num">2:15</span><span class="verse-text">And the council rejected the son's bargain.</span></div><div class="verse"><span class="verse-num">2:16</span><span class="verse-text">And the son departed in anger, swearing that the Council of Crumbs would one day kneel before him.</span></div></div>
+        <div id="book-8" class="book-header reveal">
+            <div class="book-number">BOOK VIII: THE BOOK OF RISING</div>
+            <div class="book-subtitle">Of Renewal, Perseverance, and the Promise of the Next Loaf</div>
+        </div>
+        <div class="chapter-card reveal"><h2 class="chapter-title">Chapter 1 — The Fallen Dough</h2><div class="verse"><span class="verse-num">1:1</span><span class="verse-text">And there was a baker who prepared a great quantity of dough for a feast.</span></div><div class="verse"><span class="verse-num">1:2</span><span class="verse-text">He worked through the night, measuring the ingredients, kneading the mixture, and preparing it to rise.</span></div><div class="verse"><span class="verse-num">1:3</span><span class="verse-text">But when morning came, the dough had not risen.</span></div><div class="verse"><span class="verse-num">1:4</span><span class="verse-text">And the baker was troubled, for the feast was near, and the people were waiting.</span></div><div class="verse"><span class="verse-num">1:5</span><span class="verse-text">He cried, "All my labor has been wasted!"</span></div><div class="verse"><span class="verse-num">1:6</span><span class="verse-text">And he considered abandoning the dough.</span></div><div class="verse"><span class="verse-num">1:7</span><span class="verse-text">But an elder who had observed his work approached and said, "Why do you condemn the dough before you understand what has happened?"</span></div><div class="verse"><span class="verse-num">1:8</span><span class="verse-text">The baker answered, "It has failed to rise."</span></div><div class="verse"><span class="verse-num">1:9</span><span class="verse-text">And the elder replied, "Then learn why it has not risen."</span></div><div class="verse"><span class="verse-num">1:10</span><span class="verse-text">The baker examined the dough and discovered that the room had been too cold.</span></div><div class="verse"><span class="verse-num">1:11</span><span class="verse-text">He moved the dough to a warmer place and waited.</span></div><div class="verse"><span class="verse-num">1:12</span><span class="verse-text">And the dough began to rise.</span></div><div class="verse"><span class="verse-num">1:13</span><span class="verse-text">The baker watched in wonder as the mixture grew and softened.</span></div><div class="verse"><span class="verse-num">1:14</span><span class="verse-text">And the elder said, "Behold, the dough has not abandoned its purpose merely because it has taken longer than you expected."</span></div><div class="verse"><span class="verse-num">1:15</span><span class="verse-text">"So too may a person stumble, struggle, or require more time than others."</span></div><div class="verse"><span class="verse-num">1:16</span><span class="verse-text">"Do not mistake delay for defeat, nor difficulty for proof that you are unworthy."</span></div><div class="verse"><span class="verse-num">1:17</span><span class="verse-text">And the baker remembered these words.</span></div><div class="verse"><span class="verse-num">1:18</span><span class="verse-text">And the feast was prepared, and the people ate.</span></div><div class="verse"><span class="verse-num">1:19</span><span class="verse-text">And the baker taught his apprentices the lesson of the fallen dough.</span></div></div><div class="chapter-card reveal"><h2 class="chapter-title">Chapter 2 — The New Grain</h2><div class="verse"><span class="verse-num">2:1</span><span class="verse-text">And as the people rebuilt their lands, they discovered new grains and learned new methods of cultivation.</span></div><div class="verse"><span class="verse-num">2:2</span><span class="verse-text">Some grains grew well in dry soil, while others flourished beside rivers.</span></div><div class="verse"><span class="verse-num">2:3</span><span class="verse-text">Some produced flour suited to flatbreads, while others yielded loaves that rose high within the oven.</span></div><div class="verse"><span class="verse-num">2:4</span><span class="verse-text">And the people debated which grain should be planted throughout the land.</span></div><div class="verse"><span class="verse-num">2:5</span><span class="verse-text">Then a farmer stood and said, "Why must we choose only one?"</span></div><div class="verse"><span class="verse-num">2:6</span><span class="verse-text">"Let us plant that which thrives in each field, and let each village learn the ways of its own soil."</span></div><div class="verse"><span class="verse-num">2:7</span><span class="verse-text">And the people accepted his counsel.</span></div><div class="verse"><span class="verse-num">2:8</span><span class="verse-text">They experimented with new crops and exchanged their discoveries with neighboring communities.</span></div><div class="verse"><span class="verse-num">2:9</span><span class="verse-text">And the harvests improved, and the people gained new kinds of bread.</span></div><div class="verse"><span class="verse-num">2:10</span><span class="verse-text">And the council declared that the discovery of something new did not dishonor the traditions of the old.</span></div><div class="verse"><span class="verse-num">2:11</span><span class="verse-text">For the First Prophet had not taught the people to cease learning once they had baked their first loaf.</span></div><div class="verse"><span class="verse-num">2:12</span><span class="verse-text">She had taught them to begin.</span></div><div class="verse"><span class="verse-num">2:13</span><span class="verse-text">And thus the sacred art continued to grow.</span></div></div>
+        <div id="book-9" class="book-header reveal">
+            <div class="book-number">BOOK IX: THE BOOK OF COOKING</div>
+            <div class="book-subtitle">The Sacred Cookbook and the Three Commandments of the Bread</div>
+        </div>
+        <div class="chapter-card reveal"><h2 class="chapter-title">Chapter 1 — The First Commandment</h2><div class="verse"><span class="verse-num">1:1</span><span class="verse-text">Thou shalt bake bread.</span></div><div class="verse"><span class="verse-num">1:2</span><span class="verse-text">For the grain has been given, the water has been given, the fire has been given, and the hands to knead have been given.</span></div><div class="verse"><span class="verse-num">1:3</span><span class="verse-text">Let no person believe that the gifts of creation exist without purpose.</span></div><div class="verse"><span class="verse-num">1:4</span><span class="verse-text">Thou shalt learn the sacred art, whether thy first loaf be great or humble.</span></div><div class="verse"><span class="verse-num">1:5</span><span class="verse-text">Thou shalt not despise the apprentice whose dough is uneven, nor mock the baker whose first attempts have failed.</span></div><div class="verse"><span class="verse-num">1:6</span><span class="verse-text">For every master was once a beginner, and every great bakery was once an empty room.</span></div><div class="verse"><span class="verse-num">1:7</span><span class="verse-text">Thou shalt respect the ingredients, understand the fire, and give the dough the time it requires.</span></div><div class="verse"><span class="verse-num">1:8</span><span class="verse-text">Thou shalt seek knowledge from those who know more than thee, and thou shalt teach those who know less.</span></div><div class="verse"><span class="verse-num">1:9</span><span class="verse-text">Thou shalt not claim mastery merely because thou hast baked one perfect loaf.</span></div><div class="verse"><span class="verse-num">1:10</span><span class="verse-text">For the art of baking is a lifelong practice, and the wise baker remains a student even when others call them a master.</span></div><div class="verse"><span class="verse-num">1:11</span><span class="verse-text">Thou shalt bake bread according to thy means, and thou shalt not condemn thyself for lacking the finest ovens or the rarest ingredients.</span></div><div class="verse"><span class="verse-num">1:12</span><span class="verse-text">For the greatness of a baker is not measured solely by the equipment they possess, but by the care with which they use it.</span></div><div class="verse"><span class="verse-num">1:13</span><span class="verse-text">And when thy bread is burnt, learn from it.</span></div><div class="verse"><span class="verse-num">1:14</span><span class="verse-text">When thy dough refuses to rise, learn from it.</span></div><div class="verse"><span class="verse-num">1:15</span><span class="verse-text">When thy recipe fails, learn from it.</span></div><div class="verse"><span class="verse-num">1:16</span><span class="verse-text">And when thy loaf is successful, remember what brought thee there.</span></div><div class="verse"><span class="verse-num">1:17</span><span class="verse-text">For the purpose of the first commandment is not merely that bread shall be made, but that the sacred art shall endure.</span></div></div><div class="chapter-card reveal"><h2 class="chapter-title">Chapter 2 — The Second Commandment</h2><div class="verse"><span class="verse-num">2:1</span><span class="verse-text">Thou shalt share the bread.</span></div><div class="verse"><span class="verse-num">2:2</span><span class="verse-text">For the Bread was not given that one person might feast while another starves.</span></div><div class="verse"><span class="verse-num">2:3</span><span class="verse-text">Thou shalt remember the First Prophet, who gave her first loaf to those who had laughed at her.</span></div><div class="verse"><span class="verse-num">2:4</span><span class="verse-text">Thou shalt remember Poy, who fed the people without demanding that they first prove their worthiness.</span></div><div class="verse"><span class="verse-num">2:5</span><span class="verse-text">And thou shalt remember the son of Poy, whose greed transformed a feast into a tragedy.</span></div><div class="verse"><span class="verse-num">2:6</span><span class="verse-text">Thou shalt not hoard food merely to make others dependent upon thee.</span></div><div class="verse"><span class="verse-num">2:7</span><span class="verse-text">Thou shalt not use hunger as a weapon, nor deny another person the means of survival merely because thou possessest the power to do so.</span></div><div class="verse"><span class="verse-num">2:8</span><span class="verse-text">Thou shalt offer hospitality to the traveler, kindness to the stranger, and assistance to the neighbor in need.</span></div><div class="verse"><span class="verse-num">2:9</span><span class="verse-text">Thou shalt not demand that the hungry praise thee before receiving food.</span></div><div class="verse"><span class="verse-num">2:10</span><span class="verse-text">For the purpose of feeding the hungry is that they may eat, not that the giver may be celebrated.</span></div><div class="verse"><span class="verse-num">2:11</span><span class="verse-text">Thou shalt recognize that sharing does not require thee to destroy thy own well-being, nor does generosity demand that one person bear every burden alone.</span></div><div class="verse"><span class="verse-num">2:12</span><span class="verse-text">Rather, let the people support one another, that no single household must face every hardship without help.</span></div><div class="verse"><span class="verse-num">2:13</span><span class="verse-text">Thou shalt remember that a community is strengthened when its members care for one another.</span></div><div class="verse"><span class="verse-num">2:14</span><span class="verse-text">Thou shalt not condemn another person's bread merely because it differs from thy own.</span></div><div class="verse"><span class="verse-num">2:15</span><span class="verse-text">For the loaf of thy neighbor may be shaped differently, seasoned differently, and prepared according to traditions thou hast never known.</span></div><div class="verse"><span class="verse-num">2:16</span><span class="verse-text">Yet it may nourish them as thy own bread nourishes thee.</span></div><div class="verse"><span class="verse-num">2:17</span><span class="verse-text">And if thou hast more bread than thou requirest, consider those whose tables remain empty.</span></div><div class="verse"><span class="verse-num">2:18</span><span class="verse-text">For abundance carries with it the opportunity to do good.</span></div><div class="verse"><span class="verse-num">2:19</span><span class="verse-text">And when thou receivest bread from another, accept it with gratitude.</span></div><div class="verse"><span class="verse-num">2:20</span><span class="verse-text">For the hand that gives and the hand that receives are both part of the sacred fellowship.</span></div></div><div class="chapter-card reveal"><h2 class="chapter-title">Chapter 3 — The Third Commandment</h2><div class="verse"><span class="verse-num">3:1</span><span class="verse-text">The bread will show the way.</span></div><div class="verse"><span class="verse-num">3:2</span><span class="verse-text">For bread is the lesson, the symbol, and the reminder of that which humanity may accomplish when it works together.</span></div><div class="verse"><span class="verse-num">3:3</span><span class="verse-text">As flour and water become dough, so may strangers become companions.</span></div><div class="verse"><span class="verse-num">3:4</span><span class="verse-text">As dough rises through patience, so may a person grow through learning.</span></div><div class="verse"><span class="verse-num">3:5</span><span class="verse-text">As the oven transforms the dough, so may hardship transform the heart, provided that the heart remains willing to learn.</span></div><div class="verse"><span class="verse-num">3:6</span><span class="verse-text">As the crust protects the loaf, so must the people protect the vulnerable.</span></div><div class="verse"><span class="verse-num">3:7</span><span class="verse-text">And as a loaf may be divided among many, so may kindness be multiplied through its giving.</span></div><div class="verse"><span class="verse-num">3:8</span><span class="verse-text">Thou shalt not mistake the bread for the whole of the teaching, for the bread is a reminder of the teaching.</span></div><div class="verse"><span class="verse-num">3:9</span><span class="verse-text">A person may bake every day and yet fail to understand the Bread.</span></div><div class="verse"><span class="verse-num">3:10</span><span class="verse-text">A person may recite every commandment and yet refuse to help a hungry neighbor.</span></div><div class="verse"><span class="verse-num">3:11</span><span class="verse-text">A person may possess the finest oven in the kingdom and yet have a heart colder than the stone beneath it.</span></div><div class="verse"><span class="verse-num">3:12</span><span class="verse-text">Therefore, let the commandments be measured not only by the words spoken, but by the deeds performed.</span></div><div class="verse"><span class="verse-num">3:13</span><span class="verse-text">For the one who speaks of generosity but practices greed has not understood the Second Commandment.</span></div><div class="verse"><span class="verse-num">3:14</span><span class="verse-text">The one who claims wisdom but refuses to learn has not understood the First.</span></div><div class="verse"><span class="verse-num">3:15</span><span class="verse-text">And the one who claims to follow the Bread while using it to divide the people has not understood the Third.</span></div><div class="verse"><span class="verse-num">3:16</span><span class="verse-text">Let the baker bake, the hungry be fed, the learner be taught, and the stranger be welcomed.</span></div><div class="verse"><span class="verse-num">3:17</span><span class="verse-text">Let the people remember the First Prophet, the generosity of Poy, the treachery of his son, and the wisdom of the Council of Crumbs.</span></div><div class="verse"><span class="verse-num">3:18</span><span class="verse-text">Let the recipes be shared, the ovens be tended, and the tables be prepared.</span></div><div class="verse"><span class="verse-num">3:19</span><span class="verse-text">And whenever the people break bread together, let them remember that no loaf was ever made from a single grain.</span></div><div class="verse"><span class="verse-num">3:20</span><span class="verse-text">For the world is vast, the people are many, and the ways of baking are countless.</span></div><div class="verse"><span class="verse-num">3:21</span><span class="verse-text">Yet the purpose of the Bread remains.</span></div><div class="verse"><span class="verse-num">3:22</span><span class="verse-text">To nourish the body.</span></div><div class="verse"><span class="verse-num">3:23</span><span class="verse-text">To bring people together.</span></div><div class="verse"><span class="verse-num">3:24</span><span class="verse-text">And to remind humanity that goodness, like dough, must be worked with care if it is to rise.</span></div></div>
+        <div id="book-10" class="book-header reveal">
+            <div class="book-number">BOOK X: THE BOOK OF THE LAST CRUMB</div>
+            <div class="book-subtitle">Of the Final Teaching, the Preservation of the Testament, and the Promise of the Bread</div>
+        </div>
+        <div class="chapter-card reveal"><h2 class="chapter-title">Chapter 1 — The Last Crumb</h2><div class="verse"><span class="verse-num">1:1</span><span class="verse-text">And the Council of Crumbs gathered in the final year of its first age to review the teachings that had been preserved.</span></div><div class="verse"><span class="verse-num">1:2</span><span class="verse-text">They had recorded the creation of the universe, the rise of humanity, the deeds of the First Prophet, the generosity of Poy, and the corruption that had followed his son's greed.</span></div><div class="verse"><span class="verse-num">1:3</span><span class="verse-text">They had recorded the famine, the false teachings, the restoration of the ovens, and the commandments by which the people might live.</span></div><div class="verse"><span class="verse-num">1:4</span><span class="verse-text">And they asked themselves, "What shall we teach the generations that come after us?"</span></div><div class="verse"><span class="verse-num">1:5</span><span class="verse-text">One councilor said, "We shall teach them to bake."</span></div><div class="verse"><span class="verse-num">1:6</span><span class="verse-text">Another said, "We shall teach them to share."</span></div><div class="verse"><span class="verse-num">1:7</span><span class="verse-text">Another said, "We shall teach them to remember the evils of greed."</span></div><div class="verse"><span class="verse-num">1:8</span><span class="verse-text">And another said, "We shall teach them to question those who claim authority over the Bread."</span></div><div class="verse"><span class="verse-num">1:9</span><span class="verse-text">For the council had learned that even sacred teachings could be twisted by those who sought power.</span></div><div class="verse"><span class="verse-num">1:10</span><span class="verse-text">And the eldest among them stood and held up a single crumb.</span></div><div class="verse"><span class="verse-num">1:11</span><span class="verse-text">He said, "Behold this crumb. It is small, and many would consider it worthless."</span></div><div class="verse"><span class="verse-num">1:12</span><span class="verse-text">"Yet this crumb was once part of a loaf, and that loaf was once dough, and that dough was made from ingredients drawn from the earth."</span></div><div class="verse"><span class="verse-num">1:13</span><span class="verse-text">"And the earth was formed within the universe, and the universe was brought forth from the First Dough."</span></div><div class="verse"><span class="verse-num">1:14</span><span class="verse-text">"Thus even the smallest crumb bears within its history the story of creation."</span></div><div class="verse"><span class="verse-num">1:15</span><span class="verse-text">"And so it is with the smallest act of kindness."</span></div><div class="verse"><span class="verse-num">1:16</span><span class="verse-text">"A loaf shared with one hungry person may inspire another to share with two."</span></div><div class="verse"><span class="verse-num">1:17</span><span class="verse-text">"A recipe taught to one apprentice may be passed to a thousand bakers."</span></div><div class="verse"><span class="verse-num">1:18</span><span class="verse-text">"A single good deed may be remembered long after the hand that performed it has returned to the earth."</span></div><div class="verse"><span class="verse-num">1:19</span><span class="verse-text">And the council understood that the greatness of the Bread was not found only in the grandest feasts or the finest loaves.</span></div><div class="verse"><span class="verse-num">1:20</span><span class="verse-text">It was found in the daily choice to do good.</span></div></div><div class="chapter-card reveal"><h2 class="chapter-title">Chapter 2 — The Promise of the Bread</h2><div class="verse"><span class="verse-num">2:1</span><span class="verse-text">And the eldest councilor declared, "The Bread shall endure, so long as there remain those who are willing to bake."</span></div><div class="verse"><span class="verse-num">2:2</span><span class="verse-text">"The Bread shall endure, so long as there remain those who are willing to share."</span></div><div class="verse"><span class="verse-num">2:3</span><span class="verse-text">"The Bread shall endure, so long as there remain those who remember that hunger is not a punishment for being poor."</span></div><div class="verse"><span class="verse-num">2:4</span><span class="verse-text">"The Bread shall endure, so long as there remain those who teach the young, welcome the stranger, and preserve the knowledge of those who came before."</span></div><div class="verse"><span class="verse-num">2:5</span><span class="verse-text">"For the Bread is older than any kingdom, and its teachings are greater than any single ruler."</span></div><div class="verse"><span class="verse-num">2:6</span><span class="verse-text">"Kings shall rise and fall, empires shall crumble, and the names of mighty nobles shall fade from memory."</span></div><div class="verse"><span class="verse-num">2:7</span><span class="verse-text">"Yet somewhere, a child shall mix flour and water for the first time."</span></div><div class="verse"><span class="verse-num">2:8</span><span class="verse-text">"Somewhere, a baker shall open an oven before dawn."</span></div><div class="verse"><span class="verse-num">2:9</span><span class="verse-text">"Somewhere, a traveler shall be welcomed to a table."</span></div><div class="verse"><span class="verse-num">2:10</span><span class="verse-text">"And somewhere, a hungry person shall receive a loaf from a stranger who asks nothing in return."</span></div><div class="verse"><span class="verse-num">2:11</span><span class="verse-text">"And in those moments, the First Teaching shall live again."</span></div><div class="verse"><span class="verse-num">2:12</span><span class="verse-text">Then the council placed the sacred testament within a chest of cedar and sealed it with wax.</span></div><div class="verse"><span class="verse-num">2:13</span><span class="verse-text">And they entrusted the book to those who would preserve it, teach it, and guard it from corruption.</span></div><div class="verse"><span class="verse-num">2:14</span><span class="verse-text">But they commanded that the book must never be locked away from the people.</span></div><div class="verse"><span class="verse-num">2:15</span><span class="verse-text">For a testament that cannot be read cannot teach, and a teaching that cannot be practiced cannot fulfill its purpose.</span></div><div class="verse"><span class="verse-num">2:16</span><span class="verse-text">And the council spoke its final words:</span></div><div class="verse"><span class="verse-num">2:17</span><span class="verse-text">"Bake the bread."</span></div><div class="verse"><span class="verse-num">2:18</span><span class="verse-text">"Share the bread."</span></div><div class="verse"><span class="verse-num">2:19</span><span class="verse-text">"Remember the Bread."</span></div><div class="verse"><span class="verse-num">2:20</span><span class="verse-text">And the people answered, "The bread will show the way."</span></div></div><div id="benediction" class="chapter-card benediction reveal"><h2 class="chapter-title">THE FINAL VERSE<br><span style="font-size:1.2rem; font-style:italic; opacity:0.85;">The Benediction of the Loaf</span></h2><p class="benediction-line">The Benediction of the Loaf</p><br><p class="benediction-line">And so it was written, and so it was preserved.</p><br><p class="benediction-line">From the First Dough came the universe.</p><p class="benediction-line">From the universe came life.</p><p class="benediction-line">From life came humanity.</p><p class="benediction-line">From humanity came the baker.</p><p class="benediction-line">From the baker came the loaf.</p><p class="benediction-line">From the loaf came the table.</p><p class="benediction-line">From the table came fellowship.</p><p class="benediction-line">And from fellowship came the hope that no person need face the world alone.</p><br><p class="benediction-line">Yet from the loaf also came greed, and from greed came poison, and from poison came hunger.</p><br><p class="benediction-line">Therefore, let no person believe that the Bread is righteous merely because it is bread.</p><p class="benediction-line">For even the finest ingredients may be used for evil, and even the most sacred traditions may be corrupted by those who seek power.</p><br><p class="benediction-line">Judge not the loaf by its crust alone.</p><p class="benediction-line">Judge not the baker by their title.</p><p class="benediction-line">Judge not the hungry by their hunger.</p><p class="benediction-line">Judge not the stranger by the shape of their bread.</p><br><p class="benediction-line">But look upon the hands that knead, the heart that gives, and the table at which the people gather.</p><br><p class="benediction-line">For the Bread was never meant to be a weapon.</p><p class="benediction-line">It was never meant to be a chain.</p><p class="benediction-line">It was never meant to be the property of the powerful alone.</p><br><p class="benediction-line">It was made to nourish.</p><p class="benediction-line">It was made to sustain.</p><p class="benediction-line">It was made to be shared.</p><br><p class="benediction-line">And should the world fall into famine once more, should the ovens grow cold, and should the greedy once again lock their storehouses, let the people remember the words of the First Prophet:</p><br><div class="benediction-quote">"I will bake the bread."</div><br><p class="benediction-line">For as long as there is flour, there is possibility.</p><p class="benediction-line">As long as there is water, there is potential.</p><p class="benediction-line">As long as there is fire, there is transformation.</p><p class="benediction-line">And as long as there are people willing to work together, there shall be bread.</p><br><p class="benediction-line">Go forth, therefore, and bake.</p><p class="benediction-line">Go forth, and share.</p><p class="benediction-line">Go forth, and let the bread show the way.</p><br><div class="amen">Amen.</div><br><div class="hygiene-reminder">🧼 And also, please wash thy hands before kneading.</div></div>
 
         <footer>
             <p>Praise be to the First Dough & The Council of Crumbs</p>
@@ -524,20 +516,20 @@
     <script>
         // Generate floating particles (crumbs, wheat, glowing dust)
         const container = document.getElementById('crumbs');
-        const crumbChars = ['🌾', '✨', '🍞', '🥖', '🥐', '✨', '.'];
+        const crumbChars = ['🌾', '✨', '🍞', '🥖', '🥐', '✨', '✨', '.'];
         
-        for (let i = 0; i < 40; i++) {
+        for (let i = 0; i < 45; i++) {
             const crumb = document.createElement('div');
             crumb.className = 'crumb';
             
-            if (Math.random() > 0.5) {
+            if (Math.random() > 0.45) {
                 crumb.innerText = crumbChars[Math.floor(Math.random() * crumbChars.length)];
                 crumb.style.fontSize = (Math.random() * 14 + 10) + 'px';
             } else {
-                const size = Math.random() * 4 + 2;
+                const size = Math.random() * 5 + 2;
                 crumb.style.width = size + 'px';
                 crumb.style.height = size + 'px';
-                crumb.style.background = 'radial-gradient(circle, #f4d068 0%, transparent 70%)';
+                crumb.style.background = 'radial-gradient(circle, #f9db78 0%, transparent 70%)';
                 crumb.style.borderRadius = '50%';
             }
 
@@ -553,7 +545,7 @@
             for (let i = 0; i < reveals.length; i++) {
                 const windowHeight = window.innerHeight;
                 const elementTop = reveals[i].getBoundingClientRect().top;
-                const elementVisible = 120;
+                const elementVisible = 100;
 
                 if (elementTop < windowHeight - elementVisible) {
                     reveals[i].classList.add('active');
@@ -562,7 +554,7 @@
         }
 
         window.addEventListener('scroll', revealOnScroll);
-        revealOnScroll(); // Initial check
+        revealOnScroll();
     </script>
 </body>
 </html>
